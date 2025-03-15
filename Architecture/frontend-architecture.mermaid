@@ -1,0 +1,58 @@
+graph TD;
+    A["App Entry"] --> B["Router"]
+    B --> C["Layout Components"]
+    C --> D["Feature Components"]
+    D --> E["UI Components"]
+    D --> F["Custom Hooks"]
+    D --> G["State Management"]
+    
+    subgraph "Feature Components"
+        D1["Dashboard"]
+        D2["Food Tracking"]
+        D3["Exercise Tracking"]
+        D4["Goal Setting"]
+        D5["Reports & Analytics"]
+        D6["User Profile"]
+        D7["Settings"]
+    end
+    
+    subgraph "UI Components"
+        E1["Forms"]
+        E2["Charts"]
+        E3["Tables"]
+        E4["Modals"]
+        E5["Notifications"]
+        E6["Navigation"]
+    end
+    
+    subgraph "Custom Hooks"
+        F1["useAuth"]
+        F2["useFoodTracking"]
+        F3["useExerciseTracking"]
+        F4["useGoals"]
+        F5["useAnalytics"]
+    end
+    
+    subgraph "State Management"
+        G1["Redux/Context"]
+        G2["API Services"]
+        G3["Local Storage"]
+    end
+    
+    D1 --> E
+    D2 --> E
+    D3 --> E
+    D4 --> E
+    D5 --> E
+    D6 --> E
+    D7 --> E
+    
+    D1 --> F
+    D2 --> F
+    D3 --> F
+    D4 --> F
+    D5 --> F
+    D6 --> F
+    D7 --> F
+    
+    F --> G

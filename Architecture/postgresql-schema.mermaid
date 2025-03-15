@@ -1,0 +1,119 @@
+erDiagram
+    USERS {
+        uuid id PK
+        string email
+        string password_hash
+        string first_name
+        string last_name
+        date birth_date
+        string gender
+        float height
+        float current_weight
+        float goal_weight
+        string activity_level
+        json preferences
+        timestamp created_at
+        timestamp updated_at
+    }
+    
+    USER_AUTH {
+        uuid id PK
+        uuid user_id FK
+        string provider
+        string provider_id
+        json provider_data
+        timestamp created_at
+        timestamp updated_at
+    }
+    
+    GOALS {
+        uuid id PK
+        uuid user_id FK
+        string goal_type
+        float target_value
+        date start_date
+        date end_date
+        string status
+        timestamp created_at
+        timestamp updated_at
+    }
+    
+    WEIGHT_LOGS {
+        uuid id PK
+        uuid user_id FK
+        float weight
+        date log_date
+        timestamp created_at
+    }
+    
+    EXERCISE_LOGS {
+        uuid id PK
+        uuid user_id FK
+        uuid exercise_id FK
+        int duration
+        int sets
+        int reps
+        float weight
+        int calories_burned
+        date log_date
+        timestamp created_at
+    }
+    
+    EXERCISES {
+        uuid id PK
+        string name
+        string category
+        string muscle_group
+        string equipment
+        string difficulty
+        string instructions
+        float calories_per_min
+        timestamp created_at
+        timestamp updated_at
+    }
+    
+    MEAL_LOGS {
+        uuid id PK
+        uuid user_id FK
+        string meal_type
+        date log_date
+        timestamp created_at
+    }
+    
+    MEAL_ITEMS {
+        uuid id PK
+        uuid meal_log_id FK
+        string food_id
+        float serving_size
+        string serving_unit
+        timestamp created_at
+    }
+    
+    WATER_LOGS {
+        uuid id PK
+        uuid user_id FK
+        float amount
+        string unit
+        date log_date
+        timestamp created_at
+    }
+    
+    SLEEP_LOGS {
+        uuid id PK
+        uuid user_id FK
+        datetime sleep_start
+        datetime sleep_end
+        int quality
+        date log_date
+        timestamp created_at
+    }
+    
+    USERS ||--o{ USER_AUTH : has
+    USERS ||--o{ GOALS : sets
+    USERS ||--o{ WEIGHT_LOGS : tracks
+    USERS ||--o{ EXERCISE_LOGS : records
+    USERS ||--o{ MEAL_LOGS : logs
+    USERS ||--o{ WATER_LOGS : tracks
+    USERS ||--o{ SLEEP_LOGS : monitors
+    EXERCISES ||--o{ EXERCISE_LOGS : used_in
+    MEAL_LOGS ||--o{ MEAL_ITEMS : contains

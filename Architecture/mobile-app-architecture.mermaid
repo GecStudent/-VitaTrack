@@ -1,0 +1,45 @@
+graph TD;
+    A["App Entry"] --> B["Navigation Container"]
+    B --> C["Stack Navigators"]
+    C --> D["Screen Components"]
+    D --> E["UI Components"]
+    D --> F["Native Modules"]
+    
+    subgraph "Stack Navigators"
+        C1["Auth Navigator"]
+        C2["Main Tab Navigator"]
+        C3["Modal Navigator"]
+    end
+    
+    subgraph "Screen Components"
+        D1["Dashboard Screen"]
+        D2["Food Tracking Screen"]
+        D3["Barcode Scanner Screen"]
+        D4["Exercise Tracking Screen"]
+        D5["Goals Screen"]
+        D6["Reports Screen"]
+        D7["Profile Screen"]
+    end
+    
+    subgraph "UI Components"
+        E1["Forms"]
+        E2["Charts"]
+        E3["Lists"]
+        E4["Modals"]
+        E5["Notifications"]
+    end
+    
+    subgraph "Native Modules"
+        F1["Camera/Barcode Scanner"]
+        F2["Push Notifications"]
+        F3["Health Kit Integration"]
+        F4["Google Fit Integration"]
+        F5["Local Storage"]
+        F6["Secure Storage"]
+    end
+    
+    C1 --> D
+    C2 --> D
+    C3 --> D
+    
+    D --> F

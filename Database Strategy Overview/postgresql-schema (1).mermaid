@@ -1,0 +1,177 @@
+erDiagram
+    users {
+        uuid id PK
+        string email
+        string password_hash
+        string first_name
+        string last_name
+        date birth_date
+        string gender
+        float height_cm
+        string activity_level
+        json preferences
+        timestamp created_at
+        timestamp updated_at
+    }
+    
+    user_auth {
+        uuid id PK
+        uuid user_id FK
+        string provider
+        string provider_id
+        json provider_data
+        string mfa_enabled
+        string mfa_secret
+        timestamp created_at
+        timestamp updated_at
+    }
+    
+    weight_logs {
+        uuid id PK
+        uuid user_id FK
+        float weight_kg
+        date log_date
+        string notes
+        timestamp created_at
+    }
+    
+    body_measurements {
+        uuid id PK
+        uuid user_id FK
+        float chest_cm
+        float waist_cm
+        float hips_cm
+        float biceps_cm
+        float thighs_cm
+        date log_date
+        timestamp created_at
+    }
+    
+    goals {
+        uuid id PK
+        uuid user_id FK
+        string goal_type
+        float target_value
+        float starting_value
+        date start_date
+        date target_date
+        string status
+        timestamp created_at
+        timestamp updated_at
+    }
+    
+    meal_logs {
+        uuid id PK
+        uuid user_id FK
+        string meal_type
+        timestamp meal_time
+        string notes
+        timestamp created_at
+    }
+    
+    meal_items {
+        uuid id PK
+        uuid meal_log_id FK
+        string food_id
+        float serving_size
+        string serving_unit
+        timestamp created_at
+    }
+    
+    exercise_categories {
+        uuid id PK
+        string name
+        string description
+        timestamp created_at
+        timestamp updated_at
+    }
+    
+    exercises {
+        uuid id PK
+        uuid category_id FK
+        string name
+        string muscle_group
+        string equipment
+        string difficulty
+        text instructions
+        float calories_per_min
+        string met_value
+        timestamp created_at
+        timestamp updated_at
+    }
+    
+    workout_logs {
+        uuid id PK
+        uuid user_id FK
+        string name
+        timestamp start_time
+        timestamp end_time
+        int total_calories
+        string notes
+        timestamp created_at
+    }
+    
+    workout_exercises {
+        uuid id PK
+        uuid workout_log_id FK
+        uuid exercise_id FK
+        int sets
+        int reps
+        float weight_kg
+        int duration_seconds
+        float distance_km
+        int calories_burned
+        string notes
+        timestamp created_at
+    }
+    
+    water_logs {
+        uuid id PK
+        uuid user_id FK
+        float amount_ml
+        timestamp log_time
+        timestamp created_at
+    }
+    
+    sleep_logs {
+        uuid id PK
+        uuid user_id FK
+        timestamp sleep_start
+        timestamp sleep_end
+        int duration_minutes
+        int quality_score
+        json sleep_stages
+        string notes
+        timestamp created_at
+    }
+    
+    user_daily_targets {
+        uuid id PK
+        uuid user_id FK
+        int calories
+        int protein_g
+        int carbs_g
+        int fat_g
+        int fiber_g
+        int water_ml
+        int steps
+        int active_minutes
+        timestamp created_at
+        timestamp updated_at
+    }
+    
+    users ||--o{ user_auth : "authenticates with"
+    users ||--o{ weight_logs : "tracks"
+    users ||--o{ body_measurements : "records"
+    users ||--o{ goals : "sets"
+    users ||--o{ meal_logs : "logs"
+    users ||--o{ workout_logs : "performs"
+    users ||--o{ water_logs : "tracks"
+    users ||--o{ sleep_logs : "records"
+    users ||--|| user_daily_targets : "has"
+    
+    meal_logs ||--o{ meal_items : "contains"
+    workout_logs ||--o{ workout_exercises : "includes"
+    
+    exercise_categories ||--o{ exercises : "categorizes"
+    exercises ||--o{ workout_exercises : "used in"

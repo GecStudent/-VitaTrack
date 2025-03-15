@@ -1,0 +1,23 @@
+graph TD;
+    A["foods"] --> B["nutritional_info"]
+    A --> C["serving_sizes"]
+    A --> D["categories"]
+    A --> E["brands"]
+    
+    F["recipes"] --> G["ingredients"]
+    F --> H["nutritional_info"]
+    F --> I["instructions"]
+    F --> J["categories"]
+    
+    K["restaurant_foods"] --> L["menu_items"]
+    K --> M["nutritional_info"]
+    K --> N["locations"]
+    
+    O["user_custom_foods"] --> P["food_details"]
+    O --> Q["user_id"]
+    
+    R["nutrition_logs"] --> S["daily_totals"]
+    R --> T["meal_breakdowns"]
+    
+    U["analytics"] --> V["user_trends"]
+    U --> W["aggregated_metrics"]

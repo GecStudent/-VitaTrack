@@ -1,0 +1,22 @@
+graph TD;
+    A["App"] --> B["AuthProvider"]
+    B --> C["ThemeProvider"]
+    C --> D["Router"]
+    D --> E["Layout"]
+    E --> F["Pages"]
+    
+    subgraph "Pages"
+        F1["Dashboard"]
+        F2["Food Tracking"]
+        F3["Exercise Tracking"]
+        F4["Goals & Progress"]
+        F5["Reports & Analytics"]
+        F6["Profile & Settings"]
+    end
+    
+    F1 --> G["Dashboard Components"]
+    F2 --> H["Food Tracking Components"]
+    F3 --> I["Exercise Tracking Components"]
+    F4 --> J["Goals Components"]
+    F5 --> K["Reports Components"]
+    F6 --> L["Profile Components"]

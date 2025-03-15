@@ -1,0 +1,64 @@
+graph TD;
+    A["Client Layer"] --> B["API Gateway"]
+    B --> C["Application Layer"]
+    C --> D["Data Layer"]
+    
+    subgraph "Client Layer"
+        A1["Web App (React + TypeScript)"]
+        A2["Mobile App (React Native)"]
+    end
+    
+    subgraph "API Gateway"
+        B1["API Gateway/Load Balancer"]
+        B2["Authentication Middleware"]
+        B3["Rate Limiting"]
+    end
+    
+    subgraph "Application Layer"
+        C1["User Service"]
+        C2["Food Tracking Service"]
+        C3["Exercise Service"]
+        C4["Goal & Progress Service"]
+        C5["AI Recommendation Service"]
+        C6["Notification Service"]
+        C7["Analytics Service"]
+    end
+    
+    subgraph "Data Layer"
+        D1["PostgreSQL (User Data)"]
+        D2["MongoDB (Food Database)"]
+        D3["Redis (Caching)"]
+        D4["S3/Blob Storage (Images)"]
+    end
+    
+    A1 --> B1
+    A2 --> B1
+    B1 --> B2
+    B2 --> B3
+    B3 --> C1
+    B3 --> C2
+    B3 --> C3
+    B3 --> C4
+    B3 --> C5
+    B3 --> C6
+    B3 --> C7
+    
+    C1 --> D1
+    C2 --> D1
+    C2 --> D2
+    C3 --> D1
+    C4 --> D1
+    C5 --> D1
+    C5 --> D2
+    C6 --> D1
+    C7 --> D1
+    C7 --> D2
+    
+    C1 --> D3
+    C2 --> D3
+    C3 --> D3
+    C4 --> D3
+    C5 --> D3
+    
+    C2 --> D4
+    C3 --> D4

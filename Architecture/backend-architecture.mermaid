@@ -1,0 +1,53 @@
+graph TD;
+    A["Express App"] --> B["Middleware"]
+    B --> C["Routes"]
+    C --> D["Controllers"]
+    D --> E["Services"]
+    E --> F["Data Access Layer"]
+    F --> G["Databases"]
+    
+    subgraph "Middleware"
+        B1["Authentication"]
+        B2["Request Validation"]
+        B3["Error Handling"]
+        B4["Logging"]
+        B5["CORS"]
+        B6["Rate Limiting"]
+    end
+    
+    subgraph "Routes"
+        C1["Auth Routes"]
+        C2["User Routes"]
+        C3["Food Routes"]
+        C4["Exercise Routes"]
+        C5["Goal Routes"]
+        C6["Analytics Routes"]
+        C7["Notification Routes"]
+    end
+    
+    subgraph "Services"
+        E1["Auth Service"]
+        E2["User Service"]
+        E3["Food Service"]
+        E4["Exercise Service"]
+        E5["Goal Service"]
+        E6["Analytics Service"]
+        E7["Notification Service"]
+        E8["AI Recommendation Service"]
+    end
+    
+    subgraph "Data Access Layer"
+        F1["PostgreSQL Repositories"]
+        F2["MongoDB Repositories"]
+        F3["Redis Cache"]
+    end
+    
+    subgraph "External Services"
+        H1["Email Service"]
+        H2["Push Notification Service"]
+        H3["AI/ML Service"]
+        H4["Image Recognition API"]
+        H5["Nutrition Database API"]
+    end
+    
+    E --> H
