@@ -1,0 +1,13 @@
+{
+  "task_number": 30,
+  "title": "Create Reports and Analytics API for VitaTrack",
+  "instruction": "Implement comprehensive reports and analytics API for VitaTrack health insights. Create daily, weekly, and monthly health reports, nutrition analysis, fitness progress summaries, and goal achievement analytics. Implement trend analysis, correlation studies, and predictive health insights. Setup custom report generation, data export functionality, and visualization data preparation. Include comparative analysis, peer benchmarking, and personalized health recommendations based on comprehensive data analysis.",
+  "context": {
+    "api_endpoints": "API Endpoints.ipynb",
+    "folder_path": "/backend/src/api/reports/",
+    "dependencies": [23, 26, 27],
+    "next_tasks": [31, 51],
+    "technology_stack": ["Express.js", "Data Analytics", "Statistical Analysis", "Report Generation", "Data Visualization"],
+    "files_to_create": ["report-generation.ts", "analytics.ts", "trend-analysis.ts", "health-insights.ts"]
+  }
+}

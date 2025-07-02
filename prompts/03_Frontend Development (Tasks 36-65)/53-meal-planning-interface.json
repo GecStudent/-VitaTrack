@@ -1,0 +1,12 @@
+{
+  "task_number": 53,
+  "title": "Create Meal Planning Interface for VitaTrack",
+  "instruction": "Develop a comprehensive meal planning interface with weekly/monthly meal calendars, recipe integration, and shopping list generation. Implement drag-and-drop meal scheduling, nutritional goal alignment, and batch cooking suggestions. Create meal prep planning, ingredient optimization, and cost estimation features. Include meal plan templates and sharing functionality.",
+  "context": {
+    "folder_path": "/frontend/src/components/meal-planning/",
+    "dependencies": [52],
+    "next_tasks": [54, 55],
+    "technology_stack": ["React", "TypeScript", "Drag and Drop", "Calendar Integration", "Recipe Management"],
+    "files_to_create": ["MealPlanner.tsx", "MealCalendar.tsx", "ShoppingList.tsx", "MealTemplates.tsx"]
+  }
+}

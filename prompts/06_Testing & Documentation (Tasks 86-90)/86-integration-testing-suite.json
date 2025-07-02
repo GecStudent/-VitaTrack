@@ -1,0 +1,12 @@
+{
+  "task_number": 86,
+  "title": "Create Integration Testing Suite for VitaTrack",
+  "instruction": "Develop comprehensive integration testing suite with API testing, database integration tests, and service-to-service communication testing. Implement test data management, test environment setup, and automated test execution. Create performance testing, load testing, and stress testing scenarios. Include test reporting, coverage analysis, and continuous testing integration.",
+  "context": {
+    "folder_path": "/tests/integration/",
+    "dependencies": [85],
+    "next_tasks": [87, 88],
+    "technology_stack": ["Jest", "Supertest", "Test Containers", "API Testing", "Database Testing"],
+    "files_to_create": ["api-integration.test.ts", "database-integration.test.ts", "service-integration.test.ts", "test-setup.ts"]
+  }
+}

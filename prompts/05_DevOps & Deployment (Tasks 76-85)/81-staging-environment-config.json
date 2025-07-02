@@ -1,0 +1,12 @@
+{
+  "task_number": 81,
+  "title": "Configure Staging Environment for VitaTrack",
+  "instruction": "Setup staging environment that mirrors production for testing and validation. Implement automated deployment from development branches, test data management, and integration testing. Create environment isolation, resource optimization, and cost management. Include staging-specific configurations, test automation, and quality assurance workflows.",
+  "context": {
+    "folder_path": "/infrastructure/staging/",
+    "dependencies": [80],
+    "next_tasks": [82, 83],
+    "technology_stack": ["AWS", "Environment Management", "Test Automation", "Resource Optimization", "CI/CD"],
+    "files_to_create": ["staging-config.tf", "test-data-setup.sql", "staging-deploy.yml", "qa-automation.ts"]
+  }
+}

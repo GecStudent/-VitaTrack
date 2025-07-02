@@ -1,0 +1,14 @@
+{
+  "task_number": 22,
+  "title": "Create Goal Setting API Endpoints for VitaTrack",
+  "instruction": "Implement comprehensive goal setting and tracking API endpoints for VitaTrack platform. Create SMART goal creation, progress tracking, milestone management, and goal adjustment functionality. Implement different goal types (weight loss, muscle gain, nutrition targets, activity goals), timeline management, and success metrics calculation. Setup goal sharing, accountability features, and motivational notifications. Include goal analytics, success rate tracking, and AI-powered goal recommendations based on user history and preferences.",
+  "context": {
+    "api_endpoints": "API Endpoints.ipynb",
+    "database_schema": "postgresql-schema.mermaid",
+    "folder_path": "/backend/src/api/goals/",
+    "dependencies": [17, 20, 21],
+    "next_tasks": [23, 28],
+    "technology_stack": ["Express.js", "Goal Algorithms", "Analytics", "Notifications", "AI Recommendations"],
+    "files_to_create": ["goal-crud.ts", "progress-tracking.ts", "analytics.ts", "recommendations.ts"]
+  }
+}

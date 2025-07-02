@@ -1,0 +1,12 @@
+{
+  "task_number": 88,
+  "title": "Complete API Documentation for VitaTrack",
+  "instruction": "Create comprehensive API documentation with OpenAPI/Swagger specifications, interactive documentation, and code examples. Implement API versioning documentation, authentication guides, and error handling documentation. Create SDK documentation, integration guides, and developer onboarding materials. Include API testing tools and postman collections.",
+  "context": {
+    "folder_path": "/docs/api/",
+    "dependencies": [87],
+    "next_tasks": [89, 90],
+    "technology_stack": ["OpenAPI", "Swagger", "API Documentation", "Developer Tools", "Documentation Generation"],
+    "files_to_create": ["openapi.yaml", "api-guide.md", "authentication.md", "postman-collection.json"]
+  }
+}

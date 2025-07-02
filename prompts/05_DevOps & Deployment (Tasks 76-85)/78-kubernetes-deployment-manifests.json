@@ -1,0 +1,12 @@
+{
+  "task_number": 78,
+  "title": "Create Kubernetes Deployment Manifests for VitaTrack",
+  "instruction": "Develop comprehensive Kubernetes deployment manifests with deployments, services, ingress, and configmaps. Implement horizontal pod autoscaling, resource limits, and health checks. Create namespace organization, RBAC configurations, and network policies. Include persistent volume claims, secrets management, and rolling update strategies.",
+  "context": {
+    "folder_path": "/k8s/",
+    "dependencies": [77],
+    "next_tasks": [79, 80],
+    "technology_stack": ["Kubernetes", "YAML", "Container Orchestration", "Service Mesh", "Cloud Native"],
+    "files_to_create": ["deployment.yaml", "service.yaml", "ingress.yaml", "configmap.yaml"]
+  }
+}

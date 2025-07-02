@@ -1,0 +1,12 @@
+{
+  "task_number": 62,
+  "title": "Create Loading States and Skeleton Components for VitaTrack",
+  "instruction": "Develop comprehensive loading states and skeleton components for improved user experience during data fetching. Implement skeleton screens for all major components, loading spinners, progress indicators, and lazy loading for images and charts. Create smooth transitions between loading and loaded states with optimistic UI updates and error state handling.",
+  "context": {
+    "folder_path": "/frontend/src/components/loading/",
+    "dependencies": [61],
+    "next_tasks": [63, 64],
+    "technology_stack": ["React", "TypeScript", "Framer Motion", "Skeleton Loading", "Lazy Loading"],
+    "files_to_create": ["SkeletonLoader.tsx", "LoadingSpinner.tsx", "ProgressIndicator.tsx", "LazyImage.tsx"]
+  }
+}

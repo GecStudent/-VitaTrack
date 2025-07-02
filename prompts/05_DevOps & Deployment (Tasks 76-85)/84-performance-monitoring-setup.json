@@ -1,0 +1,12 @@
+{
+  "task_number": 84,
+  "title": "Setup Performance Monitoring for VitaTrack",
+  "instruction": "Implement comprehensive performance monitoring with application performance monitoring (APM), infrastructure monitoring, and user experience tracking. Create custom dashboards, alerting rules, and performance baselines. Implement log aggregation, error tracking, and performance optimization recommendations. Include real-time monitoring and historical analysis.",
+  "context": {
+    "folder_path": "/monitoring/",
+    "dependencies": [83],
+    "next_tasks": [85, 86],
+    "technology_stack": ["Prometheus", "Grafana", "APM", "Log Aggregation", "Performance Monitoring"],
+    "files_to_create": ["prometheus-config.yml", "grafana-dashboards.json", "alerting-rules.yml", "monitoring-setup.ts"]
+  }
+}

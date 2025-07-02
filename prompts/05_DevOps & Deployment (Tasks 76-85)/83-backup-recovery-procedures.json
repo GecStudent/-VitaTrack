@@ -1,0 +1,12 @@
+{
+  "task_number": 83,
+  "title": "Create Backup and Recovery Procedures for VitaTrack",
+  "instruction": "Implement comprehensive backup and recovery procedures with automated backups, point-in-time recovery, and disaster recovery planning. Create backup validation, restoration testing, and recovery time optimization. Implement cross-region backups, encryption, and compliance requirements. Include backup monitoring, alerting, and documentation.",
+  "context": {
+    "folder_path": "/infrastructure/backup/",
+    "dependencies": [82],
+    "next_tasks": [84, 85],
+    "technology_stack": ["AWS Backup", "PostgreSQL", "Disaster Recovery", "Encryption", "Monitoring"],
+    "files_to_create": ["backup-policy.tf", "recovery-procedures.md", "backup-validation.ts", "disaster-recovery.yaml"]
+  }
+}

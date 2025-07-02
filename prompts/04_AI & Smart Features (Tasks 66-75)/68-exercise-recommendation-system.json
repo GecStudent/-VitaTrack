@@ -1,0 +1,12 @@
+{
+  "task_number": 68,
+  "title": "Create Exercise Recommendation System for VitaTrack",
+  "instruction": "Build intelligent exercise recommendation system based on fitness level, goals, available equipment, and time constraints. Implement workout plan generation, exercise progression tracking, and adaptive difficulty adjustment. Create injury prevention algorithms, recovery time optimization, and personalized training schedules. Include exercise variety and motivation factors.",
+  "context": {
+    "folder_path": "/ai/exercise-recommendations/",
+    "dependencies": [67],
+    "next_tasks": [69, 70],
+    "technology_stack": ["Machine Learning", "Exercise Science", "Fitness Algorithms", "Recommendation Systems", "Health Analytics"],
+    "files_to_create": ["exercise-recommender.ts", "workout-planner.ts", "fitness-assessor.ts", "progression-tracker.ts"]
+  }
+}

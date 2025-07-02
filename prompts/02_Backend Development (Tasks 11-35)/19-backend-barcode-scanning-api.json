@@ -1,0 +1,13 @@
+{
+  "task_number": 19,
+  "title": "Implement Barcode Scanning API Integration for VitaTrack",
+  "instruction": "Create barcode scanning API integration for VitaTrack food tracking. Integrate with external barcode databases (Open Food Facts, UPC Database), implement barcode validation, and create fallback mechanisms for unknown products. Setup caching for barcode lookups, nutrition data normalization, and product information enrichment. Include user-contributed barcode data, product verification workflows, and data quality assurance. Implement rate limiting for external API calls and cost optimization strategies.",
+  "context": {
+    "api_endpoints": "API Endpoints.ipynb",
+    "folder_path": "/backend/src/api/food/",
+    "dependencies": [18],
+    "next_tasks": [20, 28],
+    "technology_stack": ["Express.js", "External APIs", "Caching", "Data Normalization", "Rate Limiting"],
+    "files_to_create": ["barcode-service.ts", "external-apis.ts", "data-normalization.ts", "cache-strategy.ts"]
+  }
+}

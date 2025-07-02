@@ -1,0 +1,12 @@
+{
+  "task_number": 31,
+  "title": "Create Notification Service for VitaTrack",
+  "instruction": "Implement comprehensive notification service for VitaTrack user engagement. Create push notifications, email notifications, SMS alerts, and in-app messaging functionality. Implement smart notification scheduling, personalized reminder systems, and notification preference management. Setup notification templates, A/B testing for notification effectiveness, and delivery tracking. Include emergency notifications, health alerts, and motivational messaging based on user behavior and progress patterns.",
+  "context": {
+    "folder_path": "/backend/src/services/notifications/",
+    "dependencies": [24, 25],
+    "next_tasks": [32, 58],
+    "technology_stack": ["Express.js", "Push Notifications", "Email Service", "SMS Service", "Scheduling"],
+    "files_to_create": ["notification-service.ts", "push-notifications.ts", "email-service.ts", "scheduling.ts"]
+  }
+}

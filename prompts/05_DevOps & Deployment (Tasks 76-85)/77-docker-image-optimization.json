@@ -1,0 +1,12 @@
+{
+  "task_number": 77,
+  "title": "Optimize Docker Images for VitaTrack",
+  "instruction": "Create optimized Docker images for VitaTrack frontend and backend with multi-stage builds, minimal base images, and security best practices. Implement layer caching, dependency optimization, and image scanning. Create development and production variants, health checks, and container security configurations. Include image size optimization and vulnerability management.",
+  "context": {
+    "folder_path": "/docker/",
+    "dependencies": [76],
+    "next_tasks": [78, 79],
+    "technology_stack": ["Docker", "Container Optimization", "Security", "Multi-stage Builds", "Image Scanning"],
+    "files_to_create": ["Dockerfile.frontend", "Dockerfile.backend", "docker-compose.yml", ".dockerignore"]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "task_number": 4,
+  "title": "Configure Redis Cache and Session Store for VitaTrack",
+  "instruction": "Setup Redis configuration for caching and session management in VitaTrack. Configure Redis cluster with master-slave replication, implement caching strategies for frequently accessed data (user profiles, food database queries, exercise data), setup session storage with proper TTL, create cache invalidation patterns, and implement Redis Streams for real-time notifications. Configure memory optimization, persistence settings, and monitoring. Create Redis modules for specific VitaTrack use cases like nutrition calculations caching and user activity tracking.",
+  "context": {
+    "architecture_reference": "system-architecture.mermaid",
+    "folder_path": "/database/redis/",
+    "dependencies": [1],
+    "next_tasks": [11, 12],
+    "technology_stack": ["Redis", "Redis Cluster", "Redis Streams", "Caching"],
+    "files_to_create": ["redis.conf", "cluster-setup.sh", "cache-strategies.md", "monitoring.conf"]
+  }
+}

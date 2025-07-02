@@ -1,0 +1,12 @@
+{
+  "task_number": 35,
+  "title": "Create Comprehensive Backend Testing Suite for VitaTrack",
+  "instruction": "Implement comprehensive testing suite for VitaTrack backend services. Create unit tests, integration tests, API endpoint tests, and database tests. Setup test data management, mocking strategies, and test environment configuration. Implement performance testing, load testing, and security testing. Include code coverage reporting, continuous testing integration, and automated test execution. Create testing documentation and best practices guide for development team.",
+  "context": {
+    "folder_path": "/backend/tests/",
+    "dependencies": [34],
+    "next_tasks": [36, 86],
+    "technology_stack": ["Jest", "Supertest", "Test Containers", "Load Testing", "Security Testing"],
+    "files_to_create": ["unit/", "integration/", "api/", "performance/", "security/"]
+  }
+}

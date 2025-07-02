@@ -1,0 +1,12 @@
+{
+  "task_number": 71,
+  "title": "Create Health Insights Generation System for VitaTrack",
+  "instruction": "Develop comprehensive health insights generation system that analyzes user data patterns, identifies health trends, and provides actionable recommendations. Implement correlation analysis between nutrition, exercise, sleep, and health outcomes. Create personalized health reports, risk assessments, and preventive care suggestions. Include data visualization and trend prediction capabilities.",
+  "context": {
+    "folder_path": "/ai/health-insights/",
+    "dependencies": [70],
+    "next_tasks": [72, 73],
+    "technology_stack": ["Data Analytics", "Health Informatics", "Statistical Analysis", "Predictive Modeling", "Medical Knowledge"],
+    "files_to_create": ["insights-generator.ts", "health-analyzer.ts", "trend-predictor.ts", "risk-assessor.ts"]
+  }
+}

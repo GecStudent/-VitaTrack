@@ -1,0 +1,12 @@
+{
+  "task_number": 52,
+  "title": "Create AI Recommendation Display Components for VitaTrack",
+  "instruction": "Build AI-powered recommendation display components for personalized meal suggestions, exercise recommendations, and health insights. Implement smart recommendation cards, preference learning, and adaptive suggestions based on user behavior. Create recommendation filtering, feedback collection, and recommendation history tracking. Include explanation of recommendation logic and confidence scoring.",
+  "context": {
+    "folder_path": "/frontend/src/components/ai/",
+    "dependencies": [51],
+    "next_tasks": [53, 54],
+    "technology_stack": ["React", "TypeScript", "AI Integration", "Machine Learning", "Recommendation Engine"],
+    "files_to_create": ["RecommendationCard.tsx", "MealSuggestions.tsx", "ExerciseRecommendations.tsx", "HealthInsights.tsx"]
+  }
+}

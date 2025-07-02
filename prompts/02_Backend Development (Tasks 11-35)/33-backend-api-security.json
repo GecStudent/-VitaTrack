@@ -1,0 +1,12 @@
+{
+  "task_number": 33,
+  "title": "Implement API Rate Limiting and Security for VitaTrack",
+  "instruction": "Create comprehensive API security and rate limiting system for VitaTrack platform. Implement rate limiting per user/IP, API key management, request throttling, and DDoS protection. Setup input validation, SQL injection prevention, XSS protection, and CSRF tokens. Include API monitoring, suspicious activity detection, and automated threat response. Implement security headers, content security policies, and vulnerability scanning integration.",
+  "context": {
+    "folder_path": "/backend/src/security/",
+    "dependencies": [13, 32],
+    "next_tasks": [34, 85],
+    "technology_stack": ["Express.js", "Rate Limiting", "Security Middleware", "Threat Detection", "Vulnerability Scanning"],
+    "files_to_create": ["rate-limiting.ts", "security-middleware.ts", "threat-detection.ts", "vulnerability-scan.ts"]
+  }
+}

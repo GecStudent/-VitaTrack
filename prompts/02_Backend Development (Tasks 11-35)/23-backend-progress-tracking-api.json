@@ -1,0 +1,14 @@
+{
+  "task_number": 23,
+  "title": "Create Progress Tracking API Endpoints for VitaTrack",
+  "instruction": "Implement comprehensive progress tracking API endpoints for VitaTrack health monitoring. Create weight logging, body measurements tracking, progress photo management, and trend analysis functionality. Implement data visualization preparation, statistical analysis, and progress prediction algorithms. Setup milestone detection, plateau identification, and progress sharing features. Include data export capabilities, progress reports generation, and integration with wearable devices for automatic data collection.",
+  "context": {
+    "api_endpoints": "API Endpoints.ipynb",
+    "database_schema": "postgresql-schema.mermaid",
+    "folder_path": "/backend/src/api/progress/",
+    "dependencies": [22],
+    "next_tasks": [24, 30],
+    "technology_stack": ["Express.js", "Statistical Analysis", "Data Visualization", "Wearable APIs", "Trend Analysis"],
+    "files_to_create": ["weight-tracking.ts", "measurements.ts", "analytics.ts", "device-sync.ts"]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "task_number": 50,
+  "title": "Create Nutrition Summary Components for VitaTrack",
+  "instruction": "Build comprehensive nutrition summary components displaying daily macronutrient breakdown, micronutrient analysis, and calorie balance visualization. Implement nutrient deficiency alerts, recommended daily allowance tracking, and nutritional goal progress indicators. Create interactive pie charts, bar graphs, and trend analysis. Include meal timing analysis and nutritional quality scoring.",
+  "context": {
+    "folder_path": "/frontend/src/components/nutrition/",
+    "dependencies": [49],
+    "next_tasks": [51, 52],
+    "technology_stack": ["React", "TypeScript", "Recharts", "Nutritional Calculations", "Data Visualization"],
+    "files_to_create": ["NutritionSummary.tsx", "MacroBreakdown.tsx", "MicronutrientPanel.tsx", "NutritionAlerts.tsx"]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "task_number": 13,
+  "title": "Implement JWT Authentication Middleware for VitaTrack API",
+  "instruction": "Create comprehensive JWT authentication middleware for VitaTrack API. Implement token generation, validation, refresh token mechanism, and blacklisting. Setup role-based access control (RBAC), route protection, and permission checking. Configure token expiration strategies, secure token storage recommendations, and multi-device session management. Implement password hashing with bcrypt, account lockout mechanisms, and security event logging. Include social authentication preparation and MFA support structure.",
+  "context": {
+    "api_endpoints": "API Endpoints.ipynb",
+    "folder_path": "/backend/src/auth/",
+    "dependencies": [11, 12],
+    "next_tasks": [14, 15],
+    "technology_stack": ["JWT", "bcrypt", "RBAC", "Express Middleware", "Security"],
+    "files_to_create": ["middleware.ts", "jwt.ts", "rbac.ts", "security.ts", "types.ts"]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "task_number": 8,
+  "title": "Setup Environment Configuration Management for VitaTrack",
+  "instruction": "Implement comprehensive environment configuration management system for VitaTrack. Create configuration files for development, staging, and production environments with proper secret management using AWS Secrets Manager and Kubernetes Secrets. Setup environment variable injection, configuration validation, and hot-reloading capabilities. Implement feature flags system for gradual rollouts, A/B testing, and emergency toggles. Create configuration templates and validation schemas to ensure consistency across environments.",
+  "context": {
+    "architecture_reference": "system-architecture.mermaid",
+    "folder_path": "/config/",
+    "dependencies": [6, 7],
+    "next_tasks": [11, 36],
+    "technology_stack": ["AWS Secrets Manager", "Kubernetes Secrets", "Feature Flags", "Configuration Management"],
+    "files_to_create": ["environments/", "secrets/", "feature-flags/", "validation/"]
+  }
+}

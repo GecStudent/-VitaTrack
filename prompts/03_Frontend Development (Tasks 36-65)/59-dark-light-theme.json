@@ -1,0 +1,12 @@
+{
+  "task_number": 59,
+  "title": "Implement Dark/Light Theme System for VitaTrack",
+  "instruction": "Create a comprehensive theme system with dark and light mode support, automatic theme detection based on system preferences, and smooth theme transitions. Implement theme persistence, custom color schemes, and accessibility-compliant color contrasts. Create theme-aware components, chart color schemes, and user preference management for theme selection.",
+  "context": {
+    "folder_path": "/frontend/src/themes/",
+    "dependencies": [58],
+    "next_tasks": [60, 61],
+    "technology_stack": ["React", "TypeScript", "CSS Variables", "Theme Context", "Accessibility"],
+    "files_to_create": ["ThemeProvider.tsx", "theme-config.ts", "dark-theme.css", "light-theme.css"]
+  }
+}

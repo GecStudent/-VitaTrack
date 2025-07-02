@@ -1,0 +1,12 @@
+{
+  "task_number": 89,
+  "title": "Create User Documentation for VitaTrack",
+  "instruction": "Develop comprehensive user documentation with getting started guides, feature tutorials, and troubleshooting guides. Create video tutorials, interactive walkthroughs, and FAQ sections. Implement documentation search, multi-language support, and accessibility features. Include user onboarding materials, best practices guides, and community resources.",
+  "context": {
+    "folder_path": "/docs/user/",
+    "dependencies": [88],
+    "next_tasks": [90],
+    "technology_stack": ["Documentation", "User Guides", "Video Tutorials", "Interactive Walkthroughs", "Help System"],
+    "files_to_create": ["getting-started.md", "feature-guides.md", "troubleshooting.md", "faq.md"]
+  }
+}

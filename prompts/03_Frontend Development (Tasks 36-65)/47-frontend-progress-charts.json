@@ -1,0 +1,12 @@
+{
+  "task_number": 47,
+  "title": "Create Progress Visualization Charts for VitaTrack",
+  "instruction": "Implement comprehensive progress visualization charts for VitaTrack health tracking. Create weight progress charts, nutrition trend graphs, exercise performance visualization, and goal achievement tracking. Implement interactive charts with zoom, filter, and comparison capabilities. Setup responsive chart design, accessibility features, and data export options. Include trend analysis, prediction curves, and statistical insights. Create customizable dashboard widgets and chart sharing functionality.",
+  "context": {
+    "folder_path": "/frontend/src/components/charts/",
+    "dependencies": [45, 46],
+    "next_tasks": [48, 51],
+    "technology_stack": ["React", "Chart.js", "Recharts", "Data Visualization", "Responsive Design"],
+    "files_to_create": ["WeightChart.tsx", "NutritionChart.tsx", "ExerciseChart.tsx", "GoalProgress.tsx"]
+  }
+}

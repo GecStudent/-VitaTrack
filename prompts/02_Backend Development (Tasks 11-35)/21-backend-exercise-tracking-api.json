@@ -1,0 +1,14 @@
+{
+  "task_number": 21,
+  "title": "Create Exercise Tracking API Endpoints for VitaTrack",
+  "instruction": "Implement comprehensive exercise tracking API endpoints for VitaTrack fitness monitoring. Create workout logging, exercise library management, custom exercise creation, and workout template functionality. Implement calorie burn calculations, exercise progression tracking, and personal record management. Setup integration with fitness devices and apps, GPS tracking for outdoor activities, and heart rate monitoring. Include workout analytics, performance trends, and exercise recommendation algorithms based on user goals and fitness level.",
+  "context": {
+    "api_endpoints": "API Endpoints.ipynb",
+    "database_schema": "postgresql-schema.mermaid",
+    "folder_path": "/backend/src/api/exercise/",
+    "dependencies": [12, 13],
+    "next_tasks": [22, 27],
+    "technology_stack": ["Express.js", "Fitness APIs", "GPS Tracking", "Calorie Calculation", "Analytics"],
+    "files_to_create": ["workout-crud.ts", "exercise-library.ts", "calorie-calc.ts", "device-integration.ts"]
+  }
+}

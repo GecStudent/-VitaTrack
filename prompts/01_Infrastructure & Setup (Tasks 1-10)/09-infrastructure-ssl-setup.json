@@ -1,0 +1,13 @@
+{
+  "task_number": 9,
+  "title": "Configure SSL/TLS Certificates and Security for VitaTrack",
+  "instruction": "Setup comprehensive SSL/TLS certificate management for VitaTrack platform. Configure AWS Certificate Manager for domain certificates, implement cert-manager in Kubernetes for automatic certificate provisioning and renewal, setup Let's Encrypt integration for development environments, and configure proper TLS termination at load balancer and ingress levels. Implement security headers, HSTS, certificate pinning, and proper cipher suites. Create monitoring for certificate expiration and automated renewal processes.",
+  "context": {
+    "architecture_reference": "system-architecture.mermaid",
+    "folder_path": "/security/ssl/",
+    "dependencies": [1, 6],
+    "next_tasks": [33, 76],
+    "technology_stack": ["AWS ACM", "cert-manager", "Let's Encrypt", "TLS", "Security Headers"],
+    "files_to_create": ["cert-manager/", "acm-config/", "security-policies/", "monitoring/"]
+  }
+}

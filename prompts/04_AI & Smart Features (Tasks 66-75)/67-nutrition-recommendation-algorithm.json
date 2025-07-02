@@ -1,0 +1,12 @@
+{
+  "task_number": 67,
+  "title": "Create Nutrition Recommendation Algorithm for VitaTrack",
+  "instruction": "Develop intelligent nutrition recommendation algorithm using user preferences, health goals, dietary restrictions, and historical data. Implement machine learning models for personalized meal suggestions, nutrient optimization, and dietary pattern analysis. Create recommendation scoring, feedback learning, and adaptive suggestions based on user behavior and outcomes.",
+  "context": {
+    "folder_path": "/ai/nutrition-recommendations/",
+    "dependencies": [66],
+    "next_tasks": [68, 69],
+    "technology_stack": ["Machine Learning", "Recommendation Systems", "Nutritional Science", "Data Analysis", "Algorithm Design"],
+    "files_to_create": ["recommendation-engine.ts", "nutrition-optimizer.ts", "preference-learner.ts", "meal-suggester.ts"]
+  }
+}

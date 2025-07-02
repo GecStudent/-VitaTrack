@@ -1,0 +1,13 @@
+{
+  "task_number": 6,
+  "title": "Configure Kubernetes Cluster for VitaTrack Deployment",
+  "instruction": "Setup comprehensive Kubernetes configuration for VitaTrack platform deployment. Create namespaces for different environments (dev, staging, prod), implement RBAC policies, configure network policies for security, setup ingress controllers with SSL termination, create persistent volume claims for data storage, and configure horizontal pod autoscaling. Implement service mesh (Istio) for advanced traffic management, security, and observability. Create ConfigMaps and Secrets management strategy, setup monitoring with Prometheus and Grafana, and implement logging with ELK stack.",
+  "context": {
+    "architecture_reference": "system-architecture.mermaid",
+    "folder_path": "/kubernetes/",
+    "dependencies": [1, 5],
+    "next_tasks": [7, 76],
+    "technology_stack": ["Kubernetes", "RBAC", "Ingress", "HPA", "Istio", "Prometheus", "Grafana"],
+    "files_to_create": ["namespaces/", "rbac/", "ingress/", "monitoring/", "network-policies/"]
+  }
+}

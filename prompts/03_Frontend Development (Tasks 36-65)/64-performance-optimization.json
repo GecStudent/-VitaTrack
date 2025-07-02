@@ -1,0 +1,12 @@
+{
+  "task_number": 64,
+  "title": "Implement Performance Optimization for VitaTrack Frontend",
+  "instruction": "Optimize VitaTrack frontend performance with code splitting, lazy loading, memoization, and bundle optimization. Implement virtual scrolling for large lists, image optimization, and caching strategies. Create performance monitoring, Core Web Vitals tracking, and automated performance testing. Include memory leak prevention and efficient state management.",
+  "context": {
+    "folder_path": "/frontend/src/performance/",
+    "dependencies": [63],
+    "next_tasks": [65, 66],
+    "technology_stack": ["React", "Webpack", "Performance API", "Code Splitting", "Optimization"],
+    "files_to_create": ["performance-monitor.ts", "lazy-components.tsx", "virtual-scroll.tsx", "cache-strategies.ts"]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "task_number": 28,
+  "title": "Create AI Recommendation Engine API for VitaTrack",
+  "instruction": "Implement AI-powered recommendation engine API for VitaTrack personalization. Create meal recommendations based on nutrition goals, dietary preferences, and eating patterns. Implement exercise recommendations considering fitness level, available equipment, and time constraints. Setup goal adjustment suggestions, plateau-breaking strategies, and habit formation recommendations. Include machine learning models for preference learning, collaborative filtering, and predictive analytics for health outcomes.",
+  "context": {
+    "api_endpoints": "API Endpoints.ipynb",
+    "folder_path": "/backend/src/services/ai/",
+    "dependencies": [22, 26, 27],
+    "next_tasks": [29, 66],
+    "technology_stack": ["Express.js", "Machine Learning", "Recommendation Algorithms", "Predictive Analytics"],
+    "files_to_create": ["meal-recommendations.ts", "exercise-recommendations.ts", "goal-adjustments.ts", "ml-models.ts"]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "task_number": 87,
+  "title": "Setup End-to-End Testing for VitaTrack",
+  "instruction": "Create comprehensive end-to-end testing suite with user journey testing, cross-browser compatibility, and mobile testing. Implement visual regression testing, accessibility testing, and performance testing. Create test automation, parallel test execution, and test result reporting. Include test data management, environment configuration, and CI/CD integration.",
+  "context": {
+    "folder_path": "/tests/e2e/",
+    "dependencies": [86],
+    "next_tasks": [88, 89],
+    "technology_stack": ["Cypress", "Playwright", "Visual Testing", "Cross-browser Testing", "Test Automation"],
+    "files_to_create": ["user-journey.spec.ts", "visual-regression.spec.ts", "mobile-testing.spec.ts", "e2e-config.ts"]
+  }
+}

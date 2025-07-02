@@ -1,0 +1,14 @@
+{
+  "task_number": 36,
+  "title": "Initialize Next.js Project for VitaTrack Frontend",
+  "instruction": "Create Next.js project structure for VitaTrack frontend application with TypeScript, ESLint, and Prettier configuration. Setup project architecture with pages, components, hooks, services, and utilities directories. Configure environment variables, build optimization, and deployment settings. Implement SEO optimization, meta tags management, and social media sharing preparation. Setup development tools, hot reloading, and debugging configuration for optimal development experience.",
+  "context": {
+    "architecture_reference": "frontend-architecture.mermaid",
+    "folder_structure": "Folder Structure.txt",
+    "folder_path": "/frontend/",
+    "dependencies": [5, 8],
+    "next_tasks": [37, 38],
+    "technology_stack": ["Next.js", "TypeScript", "ESLint", "Prettier", "SEO Optimization"],
+    "files_to_create": ["next.config.js", "tsconfig.json", "package.json", "src/", "public/"]
+  }
+}

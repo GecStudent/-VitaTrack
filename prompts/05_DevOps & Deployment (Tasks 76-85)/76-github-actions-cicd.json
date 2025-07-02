@@ -1,0 +1,12 @@
+{
+  "task_number": 76,
+  "title": "Setup GitHub Actions CI/CD Pipeline for VitaTrack",
+  "instruction": "Create comprehensive GitHub Actions CI/CD pipeline with automated testing, building, and deployment. Implement multi-environment deployment (development, staging, production), security scanning, and quality gates. Create automated database migrations, container building, and Kubernetes deployment. Include rollback mechanisms, monitoring integration, and deployment notifications.",
+  "context": {
+    "folder_path": "/.github/workflows/",
+    "dependencies": [75],
+    "next_tasks": [77, 78],
+    "technology_stack": ["GitHub Actions", "CI/CD", "Docker", "Kubernetes", "Automated Testing"],
+    "files_to_create": ["ci-cd.yml", "test-pipeline.yml", "deploy-production.yml", "security-scan.yml"]
+  }
+}

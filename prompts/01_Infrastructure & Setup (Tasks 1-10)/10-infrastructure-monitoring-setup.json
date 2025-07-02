@@ -1,0 +1,13 @@
+{
+  "task_number": 10,
+  "title": "Setup Monitoring and Logging Infrastructure for VitaTrack",
+  "instruction": "Implement comprehensive monitoring and logging infrastructure for VitaTrack platform. Setup Prometheus for metrics collection, Grafana for visualization, AlertManager for alerting, and ELK stack (Elasticsearch, Logstash, Kibana) for centralized logging. Configure application performance monitoring (APM), infrastructure monitoring, database monitoring, and user experience monitoring. Create custom dashboards for business metrics, SLA monitoring, and operational insights. Implement log aggregation, parsing, and retention policies.",
+  "context": {
+    "architecture_reference": "system-architecture.mermaid",
+    "folder_path": "/monitoring/",
+    "dependencies": [6],
+    "next_tasks": [84, 85],
+    "technology_stack": ["Prometheus", "Grafana", "AlertManager", "ELK Stack", "APM"],
+    "files_to_create": ["prometheus/", "grafana/", "elasticsearch/", "dashboards/", "alerts/"]
+  }
+}

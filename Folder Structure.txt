@@ -1,0 +1,97 @@
+health-nutrition-tracker/
+│
+├── frontend/                   # React.js frontend application
+│   ├── public/                 # Static files
+│   │   ├── images/             # Images and icons
+│   │   ├── fonts/              # Custom fonts
+│   │   └── index.html          # HTML entry point
+│   │
+│   ├── src/                    # Source code
+│   │   ├── assets/             # Static resources
+│   │   │   ├── images/         # Images used in the app
+│   │   │   └── styles/         # Global CSS/SCSS files
+│   │   │
+│   │   ├── components/         # Reusable UI components
+│   │   │   ├── common/         # Shared components like buttons, inputs
+│   │   │   ├── layout/         # Layout components
+│   │   │   ├── dashboard/      # Dashboard specific components
+│   │   │   ├── food-tracking/  # Food tracking components
+│   │   │   ├── exercise/       # Exercise tracking components
+│   │   │   ├── reports/        # Reports and analytics components
+│   │   │   └── user/           # User profile components
+│   │   │
+│   │   ├── pages/              # Application pages
+│   │   │   ├── Dashboard/      # Main dashboard page
+│   │   │   ├── FoodTracking/   # Food logging page
+│   │   │   ├── ExerciseTracking/ # Exercise tracking page
+│   │   │   ├── Reports/        # Reports and analytics page
+│   │   │   ├── Goals/          # Goal setting page
+│   │   │   ├── MealPlanning/   # Meal planning page
+│   │   │   ├── Profile/        # User profile page
+│   │   │   └── Auth/           # Authentication pages (login, signup)
+│   │   │
+│   │   ├── hooks/              # Custom React hooks
+│   │   ├── services/           # API services and data fetching
+│   │   ├── utils/              # Utility functions
+│   │   ├── store/              # State management (Redux/Context)
+│   │   ├── types/              # TypeScript type definitions
+│   │   ├── routes/             # Route definitions
+│   │   └── App.tsx             # Main App component
+│   │
+│   ├── package.json            # Frontend dependencies
+│   └── tsconfig.json           # TypeScript configuration
+│
+├── mobile/                     # React Native mobile app
+│   ├── android/                # Android specific files
+│   ├── ios/                    # iOS specific files
+│   ├── src/                    # Similar structure to frontend
+│   └── package.json            # Mobile app dependencies
+│
+├── backend/                    # Node.js backend application
+│   ├── src/                    # Source code
+│   │   ├── api/                # API routes
+│   │   │   ├── auth/           # Authentication routes
+│   │   │   ├── users/          # User management routes
+│   │   │   ├── food/           # Food tracking routes
+│   │   │   ├── exercise/       # Exercise tracking routes
+│   │   │   ├── goals/          # Goal management routes
+│   │   │   ├── reports/        # Reports and analytics routes
+│   │   │   └── integrations/   # Third-party API integrations
+│   │   │
+│   │   ├── controllers/        # Request handlers
+│   │   ├── models/             # Database models
+│   │   ├── services/           # Business logic
+│   │   ├── utils/              # Utility functions
+│   │   ├── middleware/         # Custom middleware
+│   │   ├── config/             # Configuration files
+│   │   ├── types/              # TypeScript type definitions
+│   │   └── server.js           # Server entry point
+│   │
+│   ├── package.json            # Backend dependencies
+│   └── tsconfig.json           # TypeScript configuration
+│
+├── database/                   # Database scripts and migrations
+│   ├── migrations/             # Database migrations
+│   ├── seeds/                  # Seed data
+│   └── schemas/                # Database schemas
+│
+├── ai/                         # AI components and models
+│   ├── recommendation-engine/  # AI recommendation system
+│   ├── image-recognition/      # Food image recognition
+│   └── predictive-analytics/   # Health insights prediction
+│
+├── docs/                       # Documentation
+│   ├── api/                    # API documentation
+│   ├── architecture/           # System architecture
+│   ├── user-guides/            # User guides
+│   └── development/            # Development guides
+│
+├── tests/                      # Test files
+│   ├── frontend/               # Frontend tests
+│   ├── backend/                # Backend tests
+│   └── integration/            # Integration tests
+│
+├── .github/                    # GitHub actions and workflows
+├── .gitignore                  # Git ignore file
+├── README.md                   # Project overview
+└── docker-compose.yml          # Docker compose configuration

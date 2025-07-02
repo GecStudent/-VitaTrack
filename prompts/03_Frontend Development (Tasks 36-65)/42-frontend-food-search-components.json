@@ -1,0 +1,13 @@
+{
+  "task_number": 42,
+  "title": "Create Food Search and Selection Components for VitaTrack",
+  "instruction": "Implement comprehensive food search and selection components for VitaTrack nutrition tracking. Create intelligent search with autocomplete, filtering by categories/brands, and nutrition-based filtering. Implement food comparison tools, nutrition facts display, and serving size selection. Setup recent foods, favorite foods, and custom food creation interfaces. Include search result optimization, infinite scrolling, and offline search capability. Create food verification and user rating systems.",
+  "context": {
+    "architecture_reference": "food-tracking-components.mermaid",
+    "folder_path": "/frontend/src/components/food/",
+    "dependencies": [40, 41],
+    "next_tasks": [43, 44],
+    "technology_stack": ["React", "Search Algorithms", "Infinite Scroll", "Offline Support", "User Ratings"],
+    "files_to_create": ["FoodSearch.tsx", "FoodResults.tsx", "FoodDetails.tsx", "FoodComparison.tsx"]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "task_number": 85,
+  "title": "Implement Security Scanning and Compliance for VitaTrack",
+  "instruction": "Setup comprehensive security scanning with vulnerability assessments, dependency scanning, and compliance monitoring. Implement SAST/DAST tools, container security scanning, and infrastructure security audits. Create security policies, compliance reporting, and automated security testing. Include GDPR compliance, data protection, and security incident response.",
+  "context": {
+    "folder_path": "/security/",
+    "dependencies": [84],
+    "next_tasks": [86, 87],
+    "technology_stack": ["Security Scanning", "Compliance", "GDPR", "Vulnerability Management", "Security Automation"],
+    "files_to_create": ["security-policy.md", "vulnerability-scan.yml", "compliance-check.ts", "security-audit.yaml"]
+  }
+}

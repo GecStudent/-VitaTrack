@@ -1,0 +1,14 @@
+{
+  "task_number": 18,
+  "title": "Create Food Database API Endpoints for VitaTrack",
+  "instruction": "Implement comprehensive food database API endpoints for VitaTrack nutrition tracking. Create food search with fuzzy matching, filtering by categories/brands, nutrition information retrieval, and barcode lookup functionality. Implement custom food creation, recipe management, and restaurant food database access. Setup caching strategies for frequently accessed foods, search result optimization, and nutrition calculation services. Include food verification system, user-contributed content moderation, and nutritional data accuracy validation.",
+  "context": {
+    "api_endpoints": "API Endpoints.ipynb",
+    "database_schema": "MongoDB Schema Design.ipynb",
+    "folder_path": "/backend/src/api/food/",
+    "dependencies": [12, 13],
+    "next_tasks": [19, 20],
+    "technology_stack": ["Express.js", "MongoDB", "Search Algorithms", "Caching", "Content Moderation"],
+    "files_to_create": ["search.ts", "barcode.ts", "custom-foods.ts", "recipes.ts", "nutrition-calc.ts"]
+  }
+}

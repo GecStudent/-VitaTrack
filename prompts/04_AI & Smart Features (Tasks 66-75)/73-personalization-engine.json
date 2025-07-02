@@ -1,0 +1,12 @@
+{
+  "task_number": 73,
+  "title": "Create Personalization Engine for VitaTrack",
+  "instruction": "Build comprehensive personalization engine that adapts VitaTrack experience based on user behavior, preferences, and outcomes. Implement user profiling, preference learning, and adaptive interface customization. Create personalized content delivery, feature prioritization, and recommendation weighting. Include A/B testing framework and continuous learning mechanisms.",
+  "context": {
+    "folder_path": "/ai/personalization/",
+    "dependencies": [72],
+    "next_tasks": [74, 75],
+    "technology_stack": ["Machine Learning", "User Modeling", "Adaptive Systems", "Behavioral Analysis", "Recommendation Systems"],
+    "files_to_create": ["personalization-engine.ts", "user-profiler.ts", "preference-learner.ts", "content-adapter.ts"]
+  }
+}

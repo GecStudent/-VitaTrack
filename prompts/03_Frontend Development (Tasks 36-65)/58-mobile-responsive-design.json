@@ -1,0 +1,12 @@
+{
+  "task_number": 58,
+  "title": "Implement Mobile Responsive Design for VitaTrack",
+  "instruction": "Optimize all VitaTrack components for mobile responsiveness with touch-friendly interfaces, swipe gestures, and mobile-first design principles. Implement responsive breakpoints, mobile navigation patterns, and touch interactions. Create mobile-optimized forms, charts, and data entry interfaces. Include PWA features, offline functionality, and mobile performance optimizations.",
+  "context": {
+    "folder_path": "/frontend/src/styles/",
+    "dependencies": [57],
+    "next_tasks": [59, 60],
+    "technology_stack": ["React", "Tailwind CSS", "Responsive Design", "PWA", "Mobile Optimization"],
+    "files_to_create": ["responsive.css", "mobile-components.tsx", "touch-interactions.ts", "pwa-config.ts"]
+  }
+}

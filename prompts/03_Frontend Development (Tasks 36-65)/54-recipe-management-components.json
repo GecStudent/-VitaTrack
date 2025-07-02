@@ -1,0 +1,12 @@
+{
+  "task_number": 54,
+  "title": "Create Recipe Management Components for VitaTrack",
+  "instruction": "Build comprehensive recipe management components with recipe creation, editing, and organization features. Implement nutritional calculation for custom recipes, ingredient substitution suggestions, and cooking instruction management. Create recipe rating system, favorite recipes, and recipe sharing functionality. Include recipe import from URLs and photo upload capabilities.",
+  "context": {
+    "folder_path": "/frontend/src/components/recipes/",
+    "dependencies": [53],
+    "next_tasks": [55, 56],
+    "technology_stack": ["React", "TypeScript", "Recipe Parser", "Image Upload", "Nutritional Calculations"],
+    "files_to_create": ["RecipeEditor.tsx", "RecipeCard.tsx", "RecipeLibrary.tsx", "IngredientManager.tsx"]
+  }
+}

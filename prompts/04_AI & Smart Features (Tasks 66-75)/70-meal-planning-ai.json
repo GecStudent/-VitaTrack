@@ -1,0 +1,12 @@
+{
+  "task_number": 70,
+  "title": "Create Meal Planning AI Assistant for VitaTrack",
+  "instruction": "Build AI-powered meal planning assistant that creates personalized weekly meal plans based on nutritional goals, preferences, budget, and cooking skills. Implement recipe optimization, ingredient substitution, and shopping list generation. Create meal prep suggestions, batch cooking recommendations, and leftover utilization strategies. Include dietary restriction compliance and variety optimization.",
+  "context": {
+    "folder_path": "/ai/meal-planning/",
+    "dependencies": [69],
+    "next_tasks": [71, 72],
+    "technology_stack": ["AI Planning", "Recipe Optimization", "Nutritional Algorithms", "Constraint Solving", "Menu Generation"],
+    "files_to_create": ["meal-planner-ai.ts", "recipe-optimizer.ts", "ingredient-manager.ts", "nutrition-balancer.ts"]
+  }
+}

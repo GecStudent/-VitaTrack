@@ -1,0 +1,12 @@
+{
+  "task_number": 79,
+  "title": "Create Helm Chart Deployment for VitaTrack",
+  "instruction": "Build comprehensive Helm charts for VitaTrack deployment with templating, values management, and environment-specific configurations. Implement chart dependencies, hooks, and custom resource definitions. Create installation scripts, upgrade procedures, and rollback mechanisms. Include chart testing, validation, and documentation.",
+  "context": {
+    "folder_path": "/helm/",
+    "dependencies": [78],
+    "next_tasks": [80, 81],
+    "technology_stack": ["Helm", "Kubernetes", "Chart Templates", "Package Management", "Deployment Automation"],
+    "files_to_create": ["Chart.yaml", "values.yaml", "templates/", "charts/"]
+  }
+}

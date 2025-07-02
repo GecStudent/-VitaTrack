@@ -1,0 +1,12 @@
+{
+  "task_number": 46,
+  "title": "Create Goal Setting Interface for VitaTrack",
+  "instruction": "Implement comprehensive goal setting interface for VitaTrack health and fitness goals. Create SMART goal creation forms, goal type selection, timeline management, and milestone setting. Implement goal templates, progress visualization, and achievement tracking. Setup goal sharing, accountability features, and motivational elements. Include goal adjustment recommendations, success prediction, and failure recovery strategies. Create goal analytics and performance insights dashboard.",
+  "context": {
+    "folder_path": "/frontend/src/components/goals/",
+    "dependencies": [44, 45],
+    "next_tasks": [47, 48],
+    "technology_stack": ["React", "Form Handling", "Data Visualization", "Progress Tracking", "Motivational UI"],
+    "files_to_create": ["GoalForm.tsx", "GoalTemplates.tsx", "ProgressVisualization.tsx", "Milestones.tsx"]
+  }
+}

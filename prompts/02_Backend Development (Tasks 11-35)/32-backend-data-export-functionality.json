@@ -1,0 +1,12 @@
+{
+  "task_number": 32,
+  "title": "Implement Data Export Functionality for VitaTrack",
+  "instruction": "Create comprehensive data export functionality for VitaTrack user data portability. Implement export in multiple formats (JSON, CSV, PDF), data anonymization options, and selective export capabilities. Setup GDPR compliance features, data deletion workflows, and export scheduling. Include data validation, export progress tracking, and secure download mechanisms. Implement bulk export for research purposes, data migration tools, and integration with external health platforms.",
+  "context": {
+    "folder_path": "/backend/src/services/export/",
+    "dependencies": [17, 30],
+    "next_tasks": [33, 87],
+    "technology_stack": ["Express.js", "Data Processing", "GDPR Compliance", "File Generation", "Security"],
+    "files_to_create": ["data-export.ts", "gdpr-compliance.ts", "file-generation.ts", "secure-download.ts"]
+  }
+}

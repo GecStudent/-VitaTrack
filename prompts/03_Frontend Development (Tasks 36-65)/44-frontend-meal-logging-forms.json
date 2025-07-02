@@ -1,0 +1,13 @@
+{
+  "task_number": 44,
+  "title": "Create Meal Logging Form Components for VitaTrack",
+  "instruction": "Implement comprehensive meal logging form components for VitaTrack nutrition tracking. Create meal creation forms, food quantity input, portion size estimation, and meal timing selection. Implement meal templates, quick-add functionality, and meal photo upload. Setup nutrition summary display, goal progress tracking, and meal sharing options. Include form validation, auto-save functionality, and offline meal logging capability. Create meal editing, deletion, and duplication features.",
+  "context": {
+    "architecture_reference": "food-tracking-components.mermaid",
+    "folder_path": "/frontend/src/components/meals/",
+    "dependencies": [42, 43],
+    "next_tasks": [45, 50],
+    "technology_stack": ["React", "Form Handling", "Image Upload", "Offline Support", "Real-time Updates"],
+    "files_to_create": ["MealForm.tsx", "PortionEstimator.tsx", "MealTemplates.tsx", "NutritionSummary.tsx"]
+  }
+}

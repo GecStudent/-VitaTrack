@@ -1,0 +1,14 @@
+{
+  "task_number": 3,
+  "title": "Setup PostgreSQL Database Schema for VitaTrack",
+  "instruction": "Create comprehensive PostgreSQL database schema based on the provided schema design. Implement all tables including users, user_auth, goals, weight_logs, body_measurements, meal_logs, meal_items, workout_logs, workout_exercises, exercises, exercise_categories, water_logs, sleep_logs, and user_daily_targets. Create proper primary keys, foreign keys, indexes, constraints, and triggers. Implement row-level security policies, create database roles with appropriate permissions, and setup connection pooling. Include migration scripts for schema versioning, seed data for exercise categories and sample exercises, and backup/restore procedures. Add full-text search indexes and JSONB indexes for preferences and sleep_stages.",
+  "context": {
+    "architecture_reference": "postgresql-schema.mermaid",
+    "database_schema": "PostgreSQL Table Definitions.ipynb",
+    "folder_path": "/database/postgresql/",
+    "dependencies": [1],
+    "next_tasks": [4, 11],
+    "technology_stack": ["PostgreSQL", "SQL", "RLS", "Triggers", "Indexes"],
+    "files_to_create": ["schema.sql", "migrations/", "seeds/", "indexes.sql", "security.sql"]
+  }
+}

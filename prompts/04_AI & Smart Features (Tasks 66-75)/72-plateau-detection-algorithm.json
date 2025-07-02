@@ -1,0 +1,12 @@
+{
+  "task_number": 72,
+  "title": "Create Plateau Detection Algorithm for VitaTrack",
+  "instruction": "Implement intelligent plateau detection algorithm that identifies when users stop making progress toward their goals. Create statistical analysis of progress patterns, trend detection, and early warning systems. Implement adaptive thresholds, multi-metric analysis, and personalized plateau definitions. Include intervention suggestions and motivation strategies to overcome plateaus.",
+  "context": {
+    "folder_path": "/ai/plateau-detection/",
+    "dependencies": [71],
+    "next_tasks": [73, 74],
+    "technology_stack": ["Statistical Analysis", "Time Series Analysis", "Pattern Recognition", "Machine Learning", "Behavioral Analytics"],
+    "files_to_create": ["plateau-detector.ts", "trend-analyzer.ts", "intervention-suggester.ts", "progress-monitor.ts"]
+  }
+}

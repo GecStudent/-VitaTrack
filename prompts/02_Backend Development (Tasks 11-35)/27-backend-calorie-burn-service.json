@@ -1,0 +1,12 @@
+{
+  "task_number": 27,
+  "title": "Create Calorie Burn Calculation Service for VitaTrack",
+  "instruction": "Implement comprehensive calorie burn calculation service for VitaTrack fitness tracking. Create exercise-specific calorie calculations, activity intensity adjustments, and personalized burn rate algorithms. Implement MET (Metabolic Equivalent) calculations, heart rate-based adjustments, and duration-based scaling. Setup integration with fitness devices, GPS-based activity tracking, and real-time calorie monitoring. Include activity recognition, automatic exercise detection, and calorie burn validation algorithms.",
+  "context": {
+    "folder_path": "/backend/src/services/fitness/",
+    "dependencies": [21, 23],
+    "next_tasks": [28, 29],
+    "technology_stack": ["Express.js", "MET Calculations", "Heart Rate Analysis", "GPS Tracking", "Fitness APIs"],
+    "files_to_create": ["calorie-calc.ts", "met-database.ts", "heart-rate-calc.ts", "activity-recognition.ts"]
+  }
+}

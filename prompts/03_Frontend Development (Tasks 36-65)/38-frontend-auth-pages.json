@@ -1,0 +1,14 @@
+{
+  "task_number": 38,
+  "title": "Create Authentication Pages for VitaTrack Frontend",
+  "instruction": "Implement comprehensive authentication pages for VitaTrack frontend including login, registration, password reset, and email verification. Create responsive forms with real-time validation, error handling, and loading states. Implement social authentication options, remember me functionality, and security features display. Setup form accessibility, keyboard navigation, and screen reader support. Include onboarding flow, terms acceptance, and privacy policy integration.",
+  "context": {
+    "architecture_reference": "frontend-architecture.mermaid",
+    "api_endpoints": "API Endpoints.ipynb",
+    "folder_path": "/frontend/src/pages/auth/",
+    "dependencies": [37],
+    "next_tasks": [39, 40],
+    "technology_stack": ["Next.js", "React Hook Form", "Zod Validation", "Accessibility", "Responsive Design"],
+    "files_to_create": ["login.tsx", "register.tsx", "reset-password.tsx", "verify-email.tsx"]
+  }
+}

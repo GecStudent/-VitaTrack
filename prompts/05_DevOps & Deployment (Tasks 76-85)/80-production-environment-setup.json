@@ -1,0 +1,12 @@
+{
+  "task_number": 80,
+  "title": "Setup Production Environment for VitaTrack",
+  "instruction": "Configure production environment with high availability, load balancing, and disaster recovery. Implement production-grade security, monitoring, and logging. Create backup strategies, SSL/TLS configuration, and CDN setup. Include performance optimization, caching layers, and database clustering. Setup monitoring dashboards and alerting systems.",
+  "context": {
+    "folder_path": "/infrastructure/production/",
+    "dependencies": [79],
+    "next_tasks": [81, 82],
+    "technology_stack": ["AWS", "Load Balancers", "CDN", "SSL/TLS", "High Availability"],
+    "files_to_create": ["production-config.tf", "load-balancer.yaml", "ssl-config.yaml", "monitoring-setup.yaml"]
+  }
+}

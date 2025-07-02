@@ -1,0 +1,12 @@
+{
+  "task_number": 51,
+  "title": "Create Calorie Tracking Dashboard for VitaTrack",
+  "instruction": "Develop a comprehensive calorie tracking dashboard with real-time calorie balance, BMR calculations, and TDEE adjustments. Implement calorie burn visualization from exercise, food intake tracking, and net calorie analysis. Create calorie goal setting, deficit/surplus tracking, and predictive weight change calculations. Include meal timing impact analysis and metabolic rate adjustments.",
+  "context": {
+    "folder_path": "/frontend/src/components/calories/",
+    "dependencies": [50],
+    "next_tasks": [52, 53],
+    "technology_stack": ["React", "TypeScript", "Calorie Calculations", "Chart.js", "Real-time Updates"],
+    "files_to_create": ["CalorieDashboard.tsx", "CalorieBalance.tsx", "BMRCalculator.tsx", "CalorieGoals.tsx"]
+  }
+}

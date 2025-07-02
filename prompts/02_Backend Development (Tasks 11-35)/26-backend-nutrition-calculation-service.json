@@ -1,0 +1,13 @@
+{
+  "task_number": 26,
+  "title": "Create Nutrition Calculation Service for VitaTrack",
+  "instruction": "Implement comprehensive nutrition calculation service for VitaTrack platform. Create macronutrient and micronutrient calculations, portion size conversions, recipe nutrition analysis, and daily nutrition summaries. Implement BMR/TDEE calculations, personalized nutrition recommendations, and nutrient deficiency detection. Setup nutrition goal tracking, meal planning optimization, and dietary restriction compliance checking. Include nutrition database management, unit conversions, and accuracy validation algorithms.",
+  "context": {
+    "database_schema": "MongoDB Schema Design.ipynb",
+    "folder_path": "/backend/src/services/nutrition/",
+    "dependencies": [20, 22],
+    "next_tasks": [27, 28],
+    "technology_stack": ["Express.js", "Nutrition Algorithms", "Mathematical Calculations", "Database Optimization"],
+    "files_to_create": ["nutrition-calc.ts", "bmr-tdee.ts", "recipe-analysis.ts", "deficiency-detection.ts"]
+  }
+}

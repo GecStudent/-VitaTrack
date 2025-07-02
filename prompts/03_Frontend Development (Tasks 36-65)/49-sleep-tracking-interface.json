@@ -1,0 +1,12 @@
+{
+  "task_number": 49,
+  "title": "Create Sleep Tracking Interface for VitaTrack",
+  "instruction": "Develop a comprehensive sleep tracking interface with sleep stage visualization, quality scoring, and pattern analysis. Implement bedtime reminders, sleep goal setting, and correlation analysis with nutrition and exercise data. Create sleep diary functionality, environmental factor tracking, and personalized sleep recommendations. Include integration with wearable devices and manual sleep logging.",
+  "context": {
+    "folder_path": "/frontend/src/components/sleep/",
+    "dependencies": [48],
+    "next_tasks": [50, 51],
+    "technology_stack": ["React", "TypeScript", "Chart.js", "Sleep API Integration", "Data Visualization"],
+    "files_to_create": ["SleepTracker.tsx", "SleepChart.tsx", "SleepGoals.tsx", "SleepInsights.tsx"]
+  }
+}

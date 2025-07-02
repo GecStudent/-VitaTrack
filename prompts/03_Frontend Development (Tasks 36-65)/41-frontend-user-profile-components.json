@@ -1,0 +1,12 @@
+{
+  "task_number": 41,
+  "title": "Create User Profile Components for VitaTrack",
+  "instruction": "Implement comprehensive user profile components for VitaTrack frontend. Create profile viewing, editing, settings management, and preference configuration components. Implement profile picture upload with cropping, personal information forms, and health metrics input. Setup privacy settings, notification preferences, and account security options. Include data export requests, account deletion, and GDPR compliance features. Create profile completion tracking and onboarding guidance.",
+  "context": {
+    "folder_path": "/frontend/src/components/profile/",
+    "dependencies": [39, 40],
+    "next_tasks": [42, 56],
+    "technology_stack": ["React", "Form Handling", "Image Upload", "Privacy Controls", "GDPR Compliance"],
+    "files_to_create": ["ProfileView.tsx", "ProfileEdit.tsx", "Settings.tsx", "Privacy.tsx"]
+  }
+}

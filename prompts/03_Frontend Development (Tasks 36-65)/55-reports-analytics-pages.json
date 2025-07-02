@@ -1,0 +1,12 @@
+{
+  "task_number": 55,
+  "title": "Create Reports and Analytics Pages for VitaTrack",
+  "instruction": "Develop comprehensive reports and analytics pages with customizable date ranges, exportable reports, and detailed health insights. Implement trend analysis, comparative reports, and goal achievement tracking. Create weekly/monthly/yearly summary reports, progress photos comparison, and health metric correlations. Include PDF export, email reports, and data visualization options.",
+  "context": {
+    "folder_path": "/frontend/src/pages/reports/",
+    "dependencies": [54],
+    "next_tasks": [56, 57],
+    "technology_stack": ["React", "TypeScript", "PDF Generation", "Data Export", "Advanced Analytics"],
+    "files_to_create": ["ReportsPage.tsx", "AnalyticsDashboard.tsx", "TrendAnalysis.tsx", "HealthInsights.tsx"]
+  }
+}

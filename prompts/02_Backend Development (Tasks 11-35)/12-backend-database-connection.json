@@ -1,0 +1,13 @@
+{
+  "task_number": 12,
+  "title": "Setup Database Connection and ORM for VitaTrack Backend",
+  "instruction": "Implement database connection management for PostgreSQL and Redis in VitaTrack backend. Setup connection pooling, transaction management, query optimization, and connection health monitoring. Create database models using TypeORM or Prisma with proper relationships, validation, and migration support. Implement repository pattern for data access, caching layer integration, and database performance monitoring. Configure read/write splitting, connection retry logic, and graceful degradation strategies.",
+  "context": {
+    "database_schema": "postgresql-schema.mermaid",
+    "folder_path": "/backend/src/database/",
+    "dependencies": [3, 4, 11],
+    "next_tasks": [13, 14],
+    "technology_stack": ["TypeORM", "PostgreSQL", "Redis", "Connection Pooling", "Migrations"],
+    "files_to_create": ["connection.ts", "models/", "repositories/", "migrations/", "cache/"]
+  }
+}

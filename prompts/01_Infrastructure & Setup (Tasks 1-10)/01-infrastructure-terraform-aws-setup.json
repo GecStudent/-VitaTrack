@@ -1,0 +1,14 @@
+{
+  "task_number": 1,
+  "title": "Setup Terraform Infrastructure for VitaTrack AWS Environment",
+  "instruction": "Create a comprehensive Terraform configuration to provision all AWS resources needed for the VitaTrack platform. This includes VPC with public/private subnets across multiple AZs, Internet Gateway, NAT Gateways, Route Tables, Security Groups for web/app/database tiers, RDS PostgreSQL instance with Multi-AZ deployment, ElastiCache Redis cluster, EKS cluster with managed node groups, Application Load Balancer, S3 buckets for static assets and backups, CloudWatch log groups, IAM roles and policies for EKS service accounts, and Route53 hosted zone. Configure all resources with proper tags, encryption at rest, and follow AWS Well-Architected Framework principles. Include variables for environment-specific configurations and outputs for resource ARNs and endpoints.",
+  "context": {
+    "architecture_reference": "system-architecture.mermaid",
+    "database_schema": "postgresql-schema.mermaid",
+    "folder_path": "/infrastructure/terraform/",
+    "dependencies": [],
+    "next_tasks": [2, 3],
+    "technology_stack": ["Terraform", "AWS", "VPC", "RDS", "ElastiCache", "EKS", "ALB", "S3", "CloudWatch"],
+    "files_to_create": ["main.tf", "variables.tf", "outputs.tf", "vpc.tf", "rds.tf", "eks.tf", "security-groups.tf"]
+  }
+}

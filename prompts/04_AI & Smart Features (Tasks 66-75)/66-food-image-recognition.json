@@ -1,0 +1,12 @@
+{
+  "task_number": 66,
+  "title": "Integrate Food Image Recognition Model for VitaTrack",
+  "instruction": "Implement AI-powered food image recognition system with machine learning model integration, image preprocessing, and nutrition estimation. Create camera interface, image capture functionality, and real-time food identification. Implement confidence scoring, multiple food detection, and portion size estimation. Include model training pipeline and accuracy improvement mechanisms.",
+  "context": {
+    "folder_path": "/ai/image-recognition/",
+    "dependencies": [65],
+    "next_tasks": [67, 68],
+    "technology_stack": ["TensorFlow.js", "Computer Vision", "Machine Learning", "Image Processing", "AI Models"],
+    "files_to_create": ["food-recognition.ts", "image-processor.ts", "model-loader.ts", "nutrition-estimator.ts"]
+  }
+}

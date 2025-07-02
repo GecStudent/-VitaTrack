@@ -1,0 +1,12 @@
+{
+  "task_number": 60,
+  "title": "Create Advanced Data Visualization Components for VitaTrack",
+  "instruction": "Build advanced data visualization components with interactive charts, real-time data updates, and customizable visualization options. Implement heat maps, correlation matrices, trend predictions, and comparative analysis charts. Create data filtering, zoom capabilities, and export functionality. Include accessibility features for screen readers and keyboard navigation.",
+  "context": {
+    "folder_path": "/frontend/src/components/visualizations/",
+    "dependencies": [59],
+    "next_tasks": [61, 62],
+    "technology_stack": ["React", "D3.js", "Chart.js", "Data Processing", "Accessibility"],
+    "files_to_create": ["AdvancedCharts.tsx", "HeatMap.tsx", "CorrelationMatrix.tsx", "TrendPrediction.tsx"]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "task_number": 56,
+  "title": "Create Settings and Preferences Interface for VitaTrack",
+  "instruction": "Build comprehensive settings and preferences interface with user profile management, notification preferences, privacy settings, and app customization options. Implement theme selection, unit preferences, goal adjustments, and data export/import functionality. Create account security settings, connected device management, and subscription management interface.",
+  "context": {
+    "folder_path": "/frontend/src/components/settings/",
+    "dependencies": [55],
+    "next_tasks": [57, 58],
+    "technology_stack": ["React", "TypeScript", "Form Management", "Security", "User Preferences"],
+    "files_to_create": ["SettingsPage.tsx", "ProfileSettings.tsx", "NotificationSettings.tsx", "PrivacySettings.tsx"]
+  }
+}

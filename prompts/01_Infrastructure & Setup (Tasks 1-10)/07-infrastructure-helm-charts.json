@@ -1,0 +1,13 @@
+{
+  "task_number": 7,
+  "title": "Create Helm Charts for VitaTrack Application Deployment",
+  "instruction": "Develop comprehensive Helm charts for deploying VitaTrack application components. Create charts for backend API service, frontend web application, AI services, databases (PostgreSQL, Redis), monitoring stack, and ingress configuration. Implement templating for environment-specific values, configure resource requests/limits, setup liveness/readiness probes, and create proper service discovery. Include hooks for database migrations, backup jobs, and maintenance tasks. Create umbrella chart for full application deployment and individual charts for microservices.",
+  "context": {
+    "architecture_reference": "system-architecture.mermaid",
+    "folder_path": "/helm/",
+    "dependencies": [6],
+    "next_tasks": [76, 79],
+    "technology_stack": ["Helm", "Kubernetes", "Templating", "Service Discovery"],
+    "files_to_create": ["vitatrack/", "backend/", "frontend/", "ai-services/", "monitoring/"]
+  }
+}

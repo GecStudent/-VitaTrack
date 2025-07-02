@@ -1,0 +1,12 @@
+{
+  "task_number": 90,
+  "title": "Create Deployment Documentation for VitaTrack",
+  "instruction": "Create comprehensive deployment documentation with installation guides, configuration instructions, and maintenance procedures. Document infrastructure requirements, scaling procedures, and troubleshooting guides. Create runbooks for common operations, disaster recovery procedures, and security configurations. Include architecture diagrams, deployment checklists, and operational procedures.",
+  "context": {
+    "folder_path": "/docs/deployment/",
+    "dependencies": [89],
+    "next_tasks": [],
+    "technology_stack": ["Documentation", "Deployment Guides", "Operations", "Infrastructure", "Maintenance"],
+    "files_to_create": ["installation-guide.md", "configuration.md", "maintenance.md", "troubleshooting.md"]
+  }
+}

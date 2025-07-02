@@ -1,0 +1,13 @@
+{
+  "task_number": 2,
+  "title": "Configure Servers with Ansible for VitaTrack Deployment",
+  "instruction": "Create Ansible playbooks to configure EC2 instances and EKS worker nodes for the VitaTrack platform. Install and configure Docker, kubectl, Helm, monitoring agents (CloudWatch agent, Prometheus node exporter), security tools (fail2ban, ClamAV), log forwarding (Fluent Bit), and system hardening. Configure automatic security updates, firewall rules, SSH key management, and user accounts. Create roles for different server types (web, app, database proxy) with specific configurations. Include handlers for service restarts and validation tasks to ensure proper installation.",
+  "context": {
+    "architecture_reference": "system-architecture.mermaid",
+    "folder_path": "/infrastructure/ansible/",
+    "dependencies": [1],
+    "next_tasks": [3, 4],
+    "technology_stack": ["Ansible", "Docker", "Kubernetes", "Helm", "CloudWatch", "Prometheus"],
+    "files_to_create": ["site.yml", "inventory/", "roles/common/", "roles/docker/", "roles/k8s/"]
+  }
+}

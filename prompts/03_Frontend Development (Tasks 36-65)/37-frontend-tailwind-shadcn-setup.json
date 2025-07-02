@@ -1,0 +1,13 @@
+{
+  "task_number": 37,
+  "title": "Setup Tailwind CSS and shadcn/ui for VitaTrack Frontend",
+  "instruction": "Configure Tailwind CSS and shadcn/ui component library for VitaTrack frontend styling. Setup custom design system with VitaTrack branding, color palette, typography, and spacing scales. Implement responsive design utilities, dark/light theme support, and accessibility features. Create custom component variants, animation utilities, and design tokens. Setup component documentation and style guide for consistent UI development across the application.",
+  "context": {
+    "architecture_reference": "frontend-architecture.mermaid",
+    "folder_path": "/frontend/src/styles/",
+    "dependencies": [36],
+    "next_tasks": [38, 39],
+    "technology_stack": ["Tailwind CSS", "shadcn/ui", "Design System", "Responsive Design", "Accessibility"],
+    "files_to_create": ["tailwind.config.js", "globals.css", "components.json", "design-tokens.ts"]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "task_number": 5,
+  "title": "Create Docker Containers for VitaTrack Services",
+  "instruction": "Create optimized Docker containers for all VitaTrack services. Build multi-stage Dockerfiles for Node.js backend API, Next.js frontend application, AI services (image recognition, recommendations), and utility services (data migration, backup). Implement proper layer caching, security scanning, non-root user execution, and minimal base images. Create docker-compose files for local development with all services, databases, and dependencies. Include health checks, resource limits, and environment-specific configurations. Setup Docker registry workflow and image versioning strategy.",
+  "context": {
+    "architecture_reference": "system-architecture.mermaid",
+    "folder_path": "/docker/",
+    "dependencies": [2],
+    "next_tasks": [6, 11, 36],
+    "technology_stack": ["Docker", "Docker Compose", "Multi-stage builds", "Security scanning"],
+    "files_to_create": ["backend/Dockerfile", "frontend/Dockerfile", "ai/Dockerfile", "docker-compose.yml", "docker-compose.prod.yml"]
+  }
+}

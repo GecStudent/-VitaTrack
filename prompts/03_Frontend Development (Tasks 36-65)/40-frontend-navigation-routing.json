@@ -1,0 +1,13 @@
+{
+  "task_number": 40,
+  "title": "Setup Navigation and Routing for VitaTrack Frontend",
+  "instruction": "Implement comprehensive navigation and routing system for VitaTrack frontend application. Create protected routes, authentication guards, and role-based access control. Setup dynamic routing, nested routes, and route parameters handling. Implement breadcrumb navigation, route transitions, and loading states. Include deep linking support, URL state management, and SEO-friendly URLs. Create navigation analytics and user journey tracking.",
+  "context": {
+    "architecture_reference": "frontend-architecture.mermaid",
+    "folder_path": "/frontend/src/components/navigation/",
+    "dependencies": [38, 39],
+    "next_tasks": [41, 42],
+    "technology_stack": ["Next.js Router", "Route Guards", "Dynamic Routing", "SEO", "Analytics"],
+    "files_to_create": ["RouteGuard.tsx", "Navigation.tsx", "Breadcrumb.tsx", "RouteTransition.tsx"]
+  }
+}

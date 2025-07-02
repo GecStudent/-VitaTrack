@@ -1,0 +1,14 @@
+{
+  "task_number": 11,
+  "title": "Initialize Express.js Server for VitaTrack Backend API",
+  "instruction": "Create the main Express.js server application for VitaTrack backend API. Setup project structure with TypeScript, configure middleware stack (CORS, helmet, compression, rate limiting), implement request/response logging, error handling middleware, and health check endpoints. Configure environment-based settings, graceful shutdown handling, and clustering for production. Setup API versioning, request validation middleware, and response formatting standards. Include Swagger/OpenAPI documentation setup and development tools configuration.",
+  "context": {
+    "architecture_reference": "backend-architecture.mermaid",
+    "api_endpoints": "API Endpoints.ipynb",
+    "folder_path": "/backend/src/",
+    "dependencies": [3, 4, 5],
+    "next_tasks": [12, 13],
+    "technology_stack": ["Express.js", "TypeScript", "CORS", "Helmet", "Rate Limiting", "Swagger"],
+    "files_to_create": ["server.ts", "app.ts", "middleware/", "utils/", "types/", "config/"]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "task_number": 82,
+  "title": "Create Database Migration Scripts for VitaTrack",
+  "instruction": "Develop comprehensive database migration scripts with version control, rollback capabilities, and data integrity checks. Implement automated migration execution, schema validation, and data transformation scripts. Create migration testing, backup procedures, and zero-downtime deployment strategies. Include seed data management and environment-specific migrations.",
+  "context": {
+    "folder_path": "/database/migrations/",
+    "dependencies": [81],
+    "next_tasks": [83, 84],
+    "technology_stack": ["PostgreSQL", "Database Migrations", "SQL", "Data Integrity", "Version Control"],
+    "files_to_create": ["001_initial_schema.sql", "002_add_indexes.sql", "migration-runner.ts", "rollback-scripts.sql"]
+  }
+}

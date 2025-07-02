@@ -1,0 +1,14 @@
+{
+  "task_number": 14,
+  "title": "Create User Registration API Endpoint for VitaTrack",
+  "instruction": "Implement comprehensive user registration API endpoint for VitaTrack platform. Create input validation for email, password strength, personal information, and health metrics. Implement duplicate email checking, password hashing, email verification workflow, and welcome email sending. Setup user profile creation with default preferences, goal calculation based on user metrics, and initial daily targets setup. Include GDPR compliance features, terms acceptance tracking, and audit logging for registration events.",
+  "context": {
+    "api_endpoints": "API Endpoints.ipynb",
+    "database_schema": "postgresql-schema.mermaid",
+    "folder_path": "/backend/src/api/auth/",
+    "dependencies": [12, 13],
+    "next_tasks": [15, 16],
+    "technology_stack": ["Express.js", "Validation", "Email Service", "GDPR", "Audit Logging"],
+    "files_to_create": ["register.ts", "validation.ts", "email.ts", "gdpr.ts"]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "task_number": 17,
+  "title": "Create User Profile Management API for VitaTrack",
+  "instruction": "Implement comprehensive user profile management API for VitaTrack platform. Create endpoints for profile viewing, updating personal information, health metrics management, and preference configuration. Implement data validation, change tracking, and audit logging. Setup profile picture upload with image processing, privacy settings management, and data export functionality. Include GDPR compliance features, data deletion requests, and profile completion tracking.",
+  "context": {
+    "api_endpoints": "API Endpoints.ipynb",
+    "database_schema": "postgresql-schema.mermaid",
+    "folder_path": "/backend/src/api/users/",
+    "dependencies": [13, 14],
+    "next_tasks": [18, 22],
+    "technology_stack": ["Express.js", "Image Processing", "GDPR", "Data Validation", "Audit Logging"],
+    "files_to_create": ["profile.ts", "image-upload.ts", "privacy.ts", "data-export.ts"]
+  }
+}

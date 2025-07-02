@@ -1,0 +1,13 @@
+{
+  "task_number": 34,
+  "title": "Generate API Documentation for VitaTrack Backend",
+  "instruction": "Create comprehensive API documentation for VitaTrack backend services. Implement OpenAPI/Swagger documentation with interactive testing capabilities, request/response examples, and authentication guides. Setup automated documentation generation, version management, and change tracking. Include API usage analytics, developer onboarding guides, and SDK generation. Create documentation for webhooks, rate limits, error codes, and best practices for API consumption.",
+  "context": {
+    "api_endpoints": "API Endpoints.ipynb",
+    "folder_path": "/backend/docs/",
+    "dependencies": [11, 33],
+    "next_tasks": [35, 88],
+    "technology_stack": ["OpenAPI", "Swagger", "Documentation Generation", "API Testing", "SDK Generation"],
+    "files_to_create": ["swagger-config.ts", "api-docs.yaml", "examples/", "guides/"]
+  }
+}

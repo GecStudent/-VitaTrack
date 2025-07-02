@@ -1,0 +1,13 @@
+{
+  "task_number": 39,
+  "title": "Create Dashboard Layout Component for VitaTrack",
+  "instruction": "Implement responsive dashboard layout component for VitaTrack application. Create navigation sidebar, header with user menu, breadcrumb navigation, and main content area. Implement collapsible sidebar, mobile navigation drawer, and responsive breakpoint handling. Setup layout state management, theme switching, and notification display area. Include search functionality, quick actions menu, and accessibility features for keyboard navigation and screen readers.",
+  "context": {
+    "architecture_reference": "dashboard-components.mermaid",
+    "folder_path": "/frontend/src/components/layout/",
+    "dependencies": [37, 38],
+    "next_tasks": [40, 41],
+    "technology_stack": ["Next.js", "React", "Responsive Design", "State Management", "Accessibility"],
+    "files_to_create": ["DashboardLayout.tsx", "Sidebar.tsx", "Header.tsx", "Navigation.tsx"]
+  }
+}

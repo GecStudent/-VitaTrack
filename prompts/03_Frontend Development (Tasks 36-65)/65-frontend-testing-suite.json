@@ -1,0 +1,12 @@
+{
+  "task_number": 65,
+  "title": "Create Frontend Testing Suite for VitaTrack",
+  "instruction": "Develop comprehensive frontend testing suite with unit tests, integration tests, and end-to-end tests. Implement component testing with React Testing Library, API mocking, and user interaction testing. Create visual regression tests, accessibility tests, and performance tests. Include test coverage reporting and automated test execution in CI/CD pipeline.",
+  "context": {
+    "folder_path": "/frontend/tests/",
+    "dependencies": [64],
+    "next_tasks": [66, 67],
+    "technology_stack": ["Jest", "React Testing Library", "Cypress", "MSW", "Testing Utilities"],
+    "files_to_create": ["component.test.tsx", "integration.test.tsx", "e2e.test.ts", "test-utils.ts"]
+  }
+}

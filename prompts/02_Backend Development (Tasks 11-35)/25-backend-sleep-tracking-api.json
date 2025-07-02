@@ -1,0 +1,14 @@
+{
+  "task_number": 25,
+  "title": "Create Sleep Tracking API Endpoints for VitaTrack",
+  "instruction": "Implement sleep tracking API endpoints for VitaTrack wellness monitoring. Create sleep logging, sleep quality assessment, sleep pattern analysis, and sleep goal management functionality. Implement integration with wearable devices, sleep stage tracking, and sleep efficiency calculations. Setup sleep recommendations, bedtime reminders, and sleep hygiene tips. Include correlation analysis between sleep and other health metrics, sleep debt calculation, and personalized sleep optimization suggestions.",
+  "context": {
+    "api_endpoints": "API Endpoints.ipynb",
+    "database_schema": "postgresql-schema.mermaid",
+    "folder_path": "/backend/src/api/sleep/",
+    "dependencies": [13, 23],
+    "next_tasks": [26, 32],
+    "technology_stack": ["Express.js", "Wearable APIs", "Sleep Analysis", "Correlation Analysis", "Health Recommendations"],
+    "files_to_create": ["sleep-logging.ts", "sleep-analysis.ts", "device-sync.ts", "recommendations.ts"]
+  }
+}

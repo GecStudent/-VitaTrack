@@ -1,0 +1,14 @@
+{
+  "task_number": 24,
+  "title": "Create Water Intake Tracking API Endpoints for VitaTrack",
+  "instruction": "Implement water intake tracking API endpoints for VitaTrack hydration monitoring. Create water logging, daily target management, reminder scheduling, and hydration analytics functionality. Implement smart reminders based on activity level, weather conditions, and personal hydration needs. Setup hydration goal calculations, intake pattern analysis, and dehydration risk assessment. Include integration with smart water bottles, hydration challenges, and social sharing features for motivation.",
+  "context": {
+    "api_endpoints": "API Endpoints.ipynb",
+    "database_schema": "postgresql-schema.mermaid",
+    "folder_path": "/backend/src/api/water/",
+    "dependencies": [13, 22],
+    "next_tasks": [25, 31],
+    "technology_stack": ["Express.js", "Smart Reminders", "Analytics", "Device Integration", "Weather APIs"],
+    "files_to_create": ["water-logging.ts", "reminders.ts", "analytics.ts", "smart-bottles.ts"]
+  }
+}

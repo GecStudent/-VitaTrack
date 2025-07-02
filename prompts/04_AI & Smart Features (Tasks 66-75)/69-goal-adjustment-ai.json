@@ -1,0 +1,12 @@
+{
+  "task_number": 69,
+  "title": "Create Goal Adjustment AI Logic for VitaTrack",
+  "instruction": "Develop AI-powered goal adjustment system that analyzes user progress, identifies plateaus, and suggests realistic goal modifications. Implement predictive modeling for goal achievement, timeline adjustments, and strategy recommendations. Create adaptive goal setting based on lifestyle changes, seasonal patterns, and user feedback. Include motivation and adherence optimization.",
+  "context": {
+    "folder_path": "/ai/goal-adjustment/",
+    "dependencies": [68],
+    "next_tasks": [70, 71],
+    "technology_stack": ["Machine Learning", "Predictive Analytics", "Goal Setting Theory", "Behavioral Science", "Data Analysis"],
+    "files_to_create": ["goal-optimizer.ts", "progress-analyzer.ts", "plateau-detector.ts", "motivation-engine.ts"]
+  }
+}

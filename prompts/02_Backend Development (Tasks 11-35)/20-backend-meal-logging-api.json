@@ -1,0 +1,14 @@
+{
+  "task_number": 20,
+  "title": "Create Meal Logging API Endpoints for VitaTrack",
+  "instruction": "Implement comprehensive meal logging API endpoints for VitaTrack nutrition tracking. Create meal creation, editing, deletion, and retrieval endpoints with proper portion size calculations, nutrition aggregation, and meal timing tracking. Implement meal templates, favorite meals, and quick-add functionality. Setup meal photo upload with metadata, meal sharing capabilities, and nutrition goal tracking. Include meal history analytics, pattern recognition, and personalized meal suggestions based on user preferences and goals.",
+  "context": {
+    "api_endpoints": "API Endpoints.ipynb",
+    "database_schema": "postgresql-schema.mermaid",
+    "folder_path": "/backend/src/api/meals/",
+    "dependencies": [18, 19],
+    "next_tasks": [21, 26],
+    "technology_stack": ["Express.js", "Image Upload", "Nutrition Calculation", "Analytics", "Recommendations"],
+    "files_to_create": ["meal-crud.ts", "nutrition-calc.ts", "meal-templates.ts", "analytics.ts"]
+  }
+}
