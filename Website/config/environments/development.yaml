@@ -1,0 +1,9 @@
+app:
+  name: VitaTrack
+  env: development
+  debug: true
+api:
+  url: http://localhost:3000
+featureFlags:
+  newDashboard: false
+  aiRecommendations: true 

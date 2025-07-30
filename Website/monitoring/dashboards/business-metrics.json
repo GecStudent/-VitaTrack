@@ -1,0 +1,8 @@
+{
+  "title": "VitaTrack Business Metrics",
+  "panels": [
+    { "type": "graph", "title": "Active Users", "targets": [] },
+    { "type": "graph", "title": "API Latency", "targets": [] },
+    { "type": "stat", "title": "Error Rate", "targets": [] }
+  ]
+} 

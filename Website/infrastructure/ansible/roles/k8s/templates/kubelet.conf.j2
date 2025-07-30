@@ -1,0 +1,2 @@
+[Service]
+Environment="KUBELET_EXTRA_ARGS=--cloud-provider=aws --node-labels=kubernetes.io/role=node,node.kubernetes.io/role={{ server_type }},environment={{ environment }}"

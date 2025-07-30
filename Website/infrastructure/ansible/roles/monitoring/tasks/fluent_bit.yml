@@ -1,0 +1,32 @@
+---
+- name: Add Fluent Bit GPG apt key
+  apt_key:
+    url: https://packages.fluentbit.io/fluentbit.key
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: Add Fluent Bit repository
+  apt_repository:
+    repo: deb https://packages.fluentbit.io/ubuntu/focal focal main
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: Install Fluent Bit
+  package:
+    name: fluent-bit
+    state: present
+
+- name: Configure Fluent Bit
+  template:
+    src: fluent-bit.conf.j2
+    dest: /etc/fluent-bit/fluent-bit.conf
+    owner: root
+    group: root
+    mode: '0644'
+  notify: restart fluent-bit
+
+- name: Ensure Fluent Bit service is enabled and running
+  service:
+    name: fluent-bit
+    state: started
+    enabled: yes

@@ -1,0 +1,12 @@
+---
+- name: Install CloudWatch agent
+  include_tasks: cloudwatch.yml
+  tags: cloudwatch
+
+- name: Install Prometheus Node Exporter
+  include_tasks: node_exporter.yml
+  tags: prometheus
+
+- name: Install Fluent Bit for log forwarding
+  include_tasks: fluent_bit.yml
+  tags: logging

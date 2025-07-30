@@ -1,0 +1,22 @@
+replicaCount: 1
+image:
+  repository: vitatrack/ai-services
+  tag: latest
+resources:
+  requests:
+    cpu: 200m
+    memory: 256Mi
+  limits:
+    cpu: 1
+    memory: 1Gi
+livenessProbe:
+  httpGet:
+    path: /health
+    port: 5000
+readinessProbe:
+  httpGet:
+    path: /ready
+    port: 5000
+service:
+  type: ClusterIP
+  port: 5000 

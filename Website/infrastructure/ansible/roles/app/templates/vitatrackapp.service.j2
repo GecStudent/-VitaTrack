@@ -1,0 +1,19 @@
+[Unit]
+Description=VitaTrack Application
+After=network.target
+
+[Service]
+Type=simple
+User=vitatrack
+Group=vitatrack
+WorkingDirectory=/opt/vitatrackapp
+EnvironmentFile=/opt/vitatrackapp/.env
+ExecStart=/usr/bin/node /opt/vitatrackapp/server.js
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=vitatrackapp
+
+[Install]
+WantedBy=multi-user.target

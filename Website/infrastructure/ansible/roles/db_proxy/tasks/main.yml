@@ -1,0 +1,49 @@
+---
+- name: Install PgBouncer
+  package:
+    name: pgbouncer
+    state: present
+
+- name: Configure PgBouncer
+  template:
+    src: pgbouncer.ini.j2
+    dest: /etc/pgbouncer/pgbouncer.ini
+    owner: postgres
+    group: postgres
+    mode: '0640'
+  notify: restart pgbouncer
+
+- name: Configure PgBouncer users
+  template:
+    src: userlist.txt.j2
+    dest: /etc/pgbouncer/userlist.txt
+    owner: postgres
+    group: postgres
+    mode: '0640'
+  notify: restart pgbouncer
+
+- name: Install Redis
+  package:
+    name: redis-server
+    state: present
+
+- name: Configure Redis
+  template:
+    src: redis.conf.j2
+    dest: /etc/redis/redis.conf
+    owner: redis
+    group: redis
+    mode: '0640'
+  notify: restart redis
+
+- name: Ensure PgBouncer service is enabled and running
+  service:
+    name: pgbouncer
+    state: started
+    enabled: yes
+
+- name: Ensure Redis service is enabled and running
+  service:
+    name: redis-server
+    state: started
+    enabled: yes

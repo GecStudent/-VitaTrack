@@ -1,4 +1,4 @@
-health-nutrition-tracker/
+Website/
 │
 ├── frontend/                   # React.js frontend application
 │   ├── public/                 # Static files

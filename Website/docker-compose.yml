@@ -1,0 +1,291 @@
+version: '3.8'
+
+services:
+  # === Backend Services ===
+  api-gateway:
+    build:
+      context: ./backend
+      dockerfile: ../docker/backend/Dockerfile
+      target: builder # Use builder stage for development
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/vitatrack
+      - MONGODB_URI=mongodb://mongodb:27017/vitatrack
+      - REDIS_URL=redis://redis:6379
+      - JWT_SECRET=dev_jwt_secret
+    depends_on:
+      - postgres
+      - mongodb
+      - redis
+    command: npm run dev
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  user-service:
+    build:
+      context: ./backend
+      dockerfile: ../docker/backend/Dockerfile
+      target: builder
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - PORT=3001
+      - SERVICE_NAME=user-service
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/vitatrack
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - postgres
+      - redis
+    command: npm run dev:user-service
+
+  food-tracking-service:
+    build:
+      context: ./backend
+      dockerfile: ../docker/backend/Dockerfile
+      target: builder
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - PORT=3002
+      - SERVICE_NAME=food-tracking-service
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/vitatrack
+      - MONGODB_URI=mongodb://mongodb:27017/vitatrack
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - postgres
+      - mongodb
+      - redis
+    command: npm run dev:food-service
+
+  exercise-service:
+    build:
+      context: ./backend
+      dockerfile: ../docker/backend/Dockerfile
+      target: builder
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - PORT=3003
+      - SERVICE_NAME=exercise-service
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/vitatrack
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - postgres
+      - redis
+    command: npm run dev:exercise-service
+
+  goal-progress-service:
+    build:
+      context: ./backend
+      dockerfile: ../docker/backend/Dockerfile
+      target: builder
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - PORT=3004
+      - SERVICE_NAME=goal-progress-service
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/vitatrack
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - postgres
+      - redis
+    command: npm run dev:goal-service
+
+  notification-service:
+    build:
+      context: ./backend
+      dockerfile: ../docker/backend/Dockerfile
+      target: builder
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - PORT=3005
+      - SERVICE_NAME=notification-service
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/vitatrack
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - postgres
+      - redis
+    command: npm run dev:notification-service
+
+  analytics-service:
+    build:
+      context: ./backend
+      dockerfile: ../docker/backend/Dockerfile
+      target: builder
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - PORT=3006
+      - SERVICE_NAME=analytics-service
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/vitatrack
+      - MONGODB_URI=mongodb://mongodb:27017/vitatrack
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - postgres
+      - mongodb
+      - redis
+    command: npm run dev:analytics-service
+
+  # === AI Services ===
+  ai-recommendation-service:
+    build:
+      context: ./ai
+      dockerfile: ../docker/ai/Dockerfile
+      target: builder
+    volumes:
+      - ./ai:/app
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+      - FLASK_APP=app.py
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/vitatrack
+      - MONGODB_URI=mongodb://mongodb:27017/vitatrack
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - postgres
+      - mongodb
+      - redis
+    command: flask run --host=0.0.0.0 --port=5000
+
+  image-recognition-service:
+    build:
+      context: ./ai
+      dockerfile: ../docker/ai/Dockerfile
+      target: builder
+    volumes:
+      - ./ai:/app
+    ports:
+      - "5001:5001"
+    environment:
+      - FLASK_ENV=development
+      - FLASK_APP=image_recognition.py
+      - MONGODB_URI=mongodb://mongodb:27017/vitatrack
+      - S3_BUCKET=vitatrack-images-dev
+    depends_on:
+      - mongodb
+    command: flask run --host=0.0.0.0 --port=5001
+
+  # === Frontend ===
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: ../docker/frontend/Dockerfile
+      target: builder
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_API_URL=http://localhost:3000/api
+    depends_on:
+      - api-gateway
+    command: npm run dev
+
+  # === Databases ===
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=vitatrack
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/postgresql/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+      - ./database/postgresql/indexes.sql:/docker-entrypoint-initdb.d/02-indexes.sql
+      - ./database/postgresql/triggers.sql:/docker-entrypoint-initdb.d/03-triggers.sql
+      - ./database/postgresql/security.sql:/docker-entrypoint-initdb.d/04-security.sql
+      - ./database/postgresql/seeds:/docker-entrypoint-initdb.d/seeds
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  mongodb:
+    image: mongo:6
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./database/redis/redis.conf:/usr/local/etc/redis/redis.conf
+      - redis_data:/data
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # === Utility Services ===
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@vitatrack.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+
+  mongo-express:
+    image: mongo-express
+    ports:
+      - "8081:8081"
+    environment:
+      - ME_CONFIG_MONGODB_SERVER=mongodb
+    depends_on:
+      - mongodb
+
+  redis-commander:
+    image: rediscommander/redis-commander
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+    ports:
+      - "8082:8081"
+    depends_on:
+      - redis
+
+volumes:
+  postgres_data:
+  mongodb_data:
+  redis_data:

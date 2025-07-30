@@ -1,0 +1,374 @@
+# ===================================
+# VitaTrack Project .gitignore
+# ===================================
+
+# ===================================
+# Environment Variables & Secrets
+# ===================================
+.env
+.env.local
+.env.development
+.env.production
+.env.staging
+.env.test
+.env.temp
+*.env
+
+# AWS & Cloud Secrets
+.aws/
+aws-config.json
+gcp-credentials.json
+azure-credentials.json
+
+# Kubernetes Secrets
+*-secret.yaml
+secrets/
+k8s-secrets/
+
+# ===================================
+# Node.js & NPM
+# ===================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Package lock files (keep only one)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+.nyc_output
+
+# ===================================
+# Next.js & React
+# ===================================
+.next/
+out/
+build/
+dist/
+
+# Next.js build output
+.vercel
+.turbo
+
+# ===================================
+# TypeScript
+# ===================================
+*.tsbuildinfo
+next-env.d.ts
+
+# ===================================
+# Database & Data
+# ===================================
+# PostgreSQL
+*.sql.backup
+pg_data/
+postgres_data/
+
+# Redis
+redis_data/
+dump.rdb
+
+# MongoDB
+mongodb_data/
+*.bson
+
+# Database backups
+*.dump
+*.backup
+*.sql.gz
+
+# ===================================
+# Logs & Reports
+# ===================================
+logs/
+*.log
+audit.log
+error.log
+access.log
+debug.log
+
+# Test reports
+reports/
+test-results/
+junit.xml
+coverage-report/
+
+# Performance logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===================================
+# Docker & Containers
+# ===================================
+# Docker volumes & data
+docker-data/
+postgres-data/
+redis-data/
+mongodb-data/
+
+# Docker Compose override files
+docker-compose.override.yml
+docker-compose.override.yaml
+
+# ===================================
+# Terraform & Infrastructure
+# ===================================
+# Terraform files
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+.terraform/
+.terraform.lock.hcl
+terraform.tfplan
+terraform.tfstate.backup
+
+# Terragrunt
+.terragrunt-cache/
+
+# ===================================
+# Kubernetes & Helm
+# ===================================
+# Helm
+.helm/
+charts/*.tgz
+
+# Kubernetes secrets & configs
+kubeconfig
+*.kubeconfig
+kube-config
+
+# ===================================
+# SSL & Certificates
+# ===================================
+# SSL certificates
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+ssl/
+certs/
+tls/
+
+# Let's Encrypt
+.well-known/
+
+# ===================================
+# IDE & Editor Files
+# ===================================
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ===================================
+# OS Generated Files
+# ===================================
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ===================================
+# Temporary & Cache Files
+# ===================================
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Cache directories
+.cache/
+.npm/
+.yarn/
+.pnpm/
+.eslintcache
+.parcel-cache/
+.turbo/
+
+# ===================================
+# Build & Distribution
+# ===================================
+# Build outputs
+build/
+dist/
+out/
+target/
+
+# Static files
+static/uploads/
+uploads/profile-pictures/
+uploads/meal-photos/
+
+# ===================================
+# Testing & Development
+# ===================================
+# Test coverage
+.nyc_output/
+coverage/
+*.lcov
+.coverage/
+
+# Jest
+jest_html_reporters.html
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+
+# ===================================
+# AI & Machine Learning
+# ===================================
+# Model files
+*.pkl
+*.joblib
+*.h5
+*.pb
+models/
+weights/
+
+# Dataset files
+datasets/
+data/
+*.csv.processed
+*.json.processed
+
+# ===================================
+# Monitoring & Analytics
+# ===================================
+# Prometheus data
+prometheus_data/
+
+# Grafana data
+grafana_data/
+
+# Elasticsearch data
+elasticsearch_data/
+
+# ===================================
+# Backup & Export Files
+# ===================================
+# Backup files
+*.backup
+*.bak
+*.old
+
+# Export files
+exports/
+backups/
+data-exports/
+
+# ===================================
+# Security Scan Reports
+# ===================================
+scan-reports/
+security-reports/
+vulnerability-reports/
+*.scan
+
+# ===================================
+# Ansible
+# ===================================
+# Ansible
+.ansible/
+*.retry
+
+# ===================================
+# Git Specific
+# ===================================
+# Git hooks (if not needed)
+.git/hooks/*
+!.git/hooks/*.sample
+
+# ===================================
+# Custom Project Files
+# ===================================
+# Local development files
+local/
+dev/
+sandbox/
+
+# Documentation builds
+docs/_build/
+docs/build/
+
+# Misc project files
+*.sketch
+*.fig
+*.xd
+
+# Local configuration
+local.config.js
+local.config.json
+
+# ===================================
+# Mobile Development (if applicable)
+# ===================================
+# React Native
+.expo/
+.expo-shared/
+
+# iOS
+ios/Pods/
+ios/*.xcworkspace
+ios/*.xcodeproj
+
+# Android
+android/.gradle/
+android/app/build/
+android/build/
+
+# ===================================
+# End of .gitignore
+# ===================================

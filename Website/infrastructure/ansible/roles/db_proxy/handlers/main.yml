@@ -1,0 +1,10 @@
+---
+- name: restart pgbouncer
+  service:
+    name: pgbouncer
+    state: restarted
+
+- name: restart redis
+  service:
+    name: redis-server
+    state: restarted

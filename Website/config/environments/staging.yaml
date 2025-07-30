@@ -1,0 +1,9 @@
+app:
+  name: VitaTrack
+  env: staging
+  debug: false
+api:
+  url: https://staging.api.vitatrack.com
+featureFlags:
+  newDashboard: true
+  aiRecommendations: true 

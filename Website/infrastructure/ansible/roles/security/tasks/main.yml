@@ -1,0 +1,55 @@
+---
+- name: Install security packages
+  package:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - fail2ban
+    - clamav
+    - clamav-daemon
+    - rkhunter
+    - ufw
+    - auditd
+  tags: security
+
+- name: Configure SSH hardening
+  include_tasks: ssh_hardening.yml
+  tags: ssh
+
+- name: Configure fail2ban
+  include_tasks: fail2ban.yml
+  tags: fail2ban
+
+- name: Configure ClamAV
+  include_tasks: clamav.yml
+  tags: clamav
+
+- name: Configure firewall
+  include_tasks: firewall.yml
+  tags: firewall
+
+- name: Configure system auditing
+  include_tasks: audit.yml
+  tags: audit
+
+- name: Secure shared memory
+  mount:
+    name: /dev/shm
+    src: tmpfs
+    fstype: tmpfs
+    opts: defaults,noexec,nosuid,nodev
+    state: mounted
+  tags: security
+
+- name: Set restrictive file permissions on sensitive files
+  file:
+    path: "{{ item }}"
+    mode: '0600'
+    owner: root
+    group: root
+  loop:
+    - /etc/passwd-
+    - /etc/shadow-
+    - /etc/group-
+    - /etc/gshadow-
+  tags: security

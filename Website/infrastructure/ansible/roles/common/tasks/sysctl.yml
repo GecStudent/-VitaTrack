@@ -1,0 +1,24 @@
+---
+- name: Configure sysctl for performance and security
+  sysctl:
+    name: "{{ item.key }}"
+    value: "{{ item.value }}"
+    state: present
+    reload: yes
+  with_items:
+    - { key: "net.ipv4.tcp_fin_timeout", value: "20" }
+    - { key: "net.ipv4.tcp_keepalive_time", value: "1200" }
+    - { key: "net.ipv4.tcp_max_syn_backlog", value: "2048" }
+    - { key: "net.ipv4.tcp_tw_reuse", value: "1" }
+    - { key: "net.ipv4.ip_local_port_range", value: "1024 65535" }
+    - { key: "net.core.somaxconn", value: "65535" }
+    - { key: "vm.swappiness", value: "10" }
+    - { key: "fs.file-max", value: "2097152" }
+    # Security settings
+    - { key: "net.ipv4.conf.all.accept_redirects", value: "0" }
+    - { key: "net.ipv4.conf.all.secure_redirects", value: "0" }
+    - { key: "net.ipv4.conf.all.send_redirects", value: "0" }
+    - { key: "net.ipv4.conf.all.accept_source_route", value: "0" }
+    - { key: "net.ipv4.conf.all.log_martians", value: "1" }
+    - { key: "net.ipv4.icmp_echo_ignore_broadcasts", value: "1" }
+    - { key: "net.ipv4.icmp_ignore_bogus_error_responses", value: "1" }

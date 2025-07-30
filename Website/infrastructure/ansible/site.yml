@@ -1,0 +1,36 @@
+---
+- name: Apply common configuration to all servers
+  hosts: all
+  become: yes
+  roles:
+    - common
+    - security
+    - monitoring
+
+- name: Configure web servers
+  hosts: web_servers
+  become: yes
+  roles:
+    - docker
+    - web
+
+- name: Configure application servers
+  hosts: app_servers
+  become: yes
+  roles:
+    - docker
+    - app
+
+- name: Configure database proxy servers
+  hosts: db_proxy_servers
+  become: yes
+  roles:
+    - docker
+    - db_proxy
+
+- name: Configure EKS worker nodes
+  hosts: eks_nodes
+  become: yes
+  roles:
+    - docker
+    - k8s

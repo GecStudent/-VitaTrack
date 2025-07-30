@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification - VitaTrack</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .email-header {
+            background: #4a90e2;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .email-content {
+            padding: 30px;
+        }
+
+        .greeting {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #4a90e2;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: #357abd;
+        }
+
+        .security-notice {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        .email-footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .footer-links {
+            margin-top: 10px;
+        }
+
+        .footer-links a {
+            color: #4a90e2;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 600px) {
+            .email-container {
+                margin: 0 10px;
+            }
+            
+            .email-header,
+            .email-content,
+            .email-footer {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <div class="logo">VitaTrack</div>
+            <div class="tagline">Your Health & Nutrition Companion</div>
+        </div>
+
+        <div class="email-content">
+            <div class="greeting">Verify Your Email Address</div>
+            
+            <div class="message">
+                Thank you for signing up for VitaTrack! To complete your registration and start your health journey, please verify your email address by clicking the button below.
+            </div>
+
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="{{verificationLink}}" class="cta-button" target="_blank">Verify Email Address</a>
+            </div>
+
+            <div class="security-notice">
+                <strong>Security Notice:</strong> If you didn't create an account with VitaTrack, please ignore this email. This verification link will expire in 24 hours.
+            </div>
+
+            <div class="message">
+                Once verified, you'll be able to:
+                <ul style="margin: 10px 0; padding-left: 20px;">
+                    <li>Track your meals and nutrition</li>
+                    <li>Monitor your exercise and activity</li>
+                    <li>Set and track your health goals</li>
+                    <li>Get personalized recommendations</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="email-footer">
+            <strong>VitaTrack</strong><br>
+            Your journey to better health starts here.
+            <div class="footer-links">
+                <a href="#">Unsubscribe</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Support</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const status = urlParams.get('status');
+        const error = urlParams.get('error');
+
+        function showState(stateId) {
+            document.getElementById('loading').classList.remove('show');
+            document.getElementById('success').classList.remove('show');
+            document.getElementById('already-verified').classList.remove('show');
+            document.getElementById('error').classList.remove('show');
+            document.getElementById(stateId).classList.add('show');
+        }
+
+        function closeWindow() {
+            window.close();
+        }
+
+        window.onload = function() {
+            if (status === 'success') {
+                showState('success');
+                setTimeout(closeWindow, 5000);
+            } else if (status === 'already_verified') {
+                showState('already-verified');
+                setTimeout(closeWindow, 5000);
+            } else if (error) {
+                showState('error');
+                const errorMessages = {
+                    'invalid_token': 'The verification link is invalid.',
+                    'expired_token': 'The verification link has expired. Please request a new one.',
+                    'user_not_found': 'User account not found.',
+                    'email_mismatch': 'Email verification failed.',
+                    'server_error': 'Server error occurred. Please try again later.'
+                };
+                document.getElementById('error-message').textContent = errorMessages[error] || 'An error occurred during verification.';
+            } else {
+                showState('error');
+            }
+        };
+    </script>
+</body>
+</html>
+  

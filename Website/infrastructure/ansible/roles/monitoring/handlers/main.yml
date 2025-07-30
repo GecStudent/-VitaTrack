@@ -1,0 +1,15 @@
+---
+- name: restart cloudwatch-agent
+  service:
+    name: amazon-cloudwatch-agent
+    state: restarted
+
+- name: restart node_exporter
+  service:
+    name: node_exporter
+    state: restarted
+
+- name: restart fluent-bit
+  service:
+    name: fluent-bit
+    state: restarted

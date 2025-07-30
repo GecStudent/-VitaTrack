@@ -1,0 +1,9 @@
+app:
+  name: VitaTrack
+  env: production
+  debug: false
+api:
+  url: https://api.vitatrack.com
+featureFlags:
+  newDashboard: true
+  aiRecommendations: true 

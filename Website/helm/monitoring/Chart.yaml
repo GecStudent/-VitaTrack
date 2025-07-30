@@ -1,0 +1,8 @@
+apiVersion: v2
+name: monitoring
+version: 0.1.0
+description: Monitoring stack for VitaTrack (Prometheus, Grafana)
+keywords:
+  - monitoring
+  - prometheus
+  - grafana 

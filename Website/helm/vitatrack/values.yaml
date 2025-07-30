@@ -1,0 +1,6 @@
+# Default values for vitatrack umbrella chart
+backend: {}
+frontend: {}
+aiServices: {}
+monitoring: {}
+databases: {} 

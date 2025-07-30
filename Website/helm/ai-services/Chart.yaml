@@ -1,0 +1,7 @@
+apiVersion: v2
+name: ai-services
+version: 0.1.0
+description: AI services for VitaTrack
+keywords:
+  - ai
+  - services 

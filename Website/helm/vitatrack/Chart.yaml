@@ -1,0 +1,8 @@
+apiVersion: v2
+name: vitatrack
+version: 0.1.0
+description: Umbrella chart for VitaTrack platform
+keywords:
+  - vitatrack
+  - umbrella
+  - platform 

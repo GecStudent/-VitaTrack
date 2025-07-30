@@ -1,0 +1,88 @@
+---
+- name: Include OS-specific variables
+  include_vars: "{{ ansible_os_family }}.yml"
+  tags: always
+
+- name: Update apt cache
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+  when: ansible_os_family == "Debian"
+  tags: always
+
+- name: Install common packages
+  package:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - vim
+    - curl
+    - wget
+    - unzip
+    - htop
+    - git
+    - jq
+    - python3
+    - python3-pip
+    - ca-certificates
+    - gnupg
+    - lsb-release
+    - apt-transport-https
+    - software-properties-common
+  tags: packages
+
+- name: Set timezone
+  timezone:
+    name: UTC
+  tags: timezone
+
+- name: Configure hostname
+  hostname:
+    name: "{{ inventory_hostname }}"
+  tags: hostname
+
+- name: Add hostname to /etc/hosts
+  lineinfile:
+    path: /etc/hosts
+    line: "127.0.0.1 {{ inventory_hostname }} {{ inventory_hostname_short }}"
+    regexp: "^127\.0\.0\.1\s+{{ inventory_hostname }}"
+    state: present
+  tags: hostname
+
+- name: Create vitatrack group
+  group:
+    name: vitatrack
+    state: present
+  tags: users
+
+- name: Create vitatrack user
+  user:
+    name: vitatrack
+    group: vitatrack
+    shell: /bin/bash
+    create_home: yes
+    state: present
+  tags: users
+
+- name: Set up authorized keys for vitatrack user
+  authorized_key:
+    user: vitatrack
+    key: "{{ lookup('file', 'files/authorized_keys') }}"
+    state: present
+  tags: ssh
+
+- name: Configure automatic security updates
+  include_tasks: auto_updates.yml
+  tags: security
+
+- name: Configure NTP
+  include_tasks: ntp.yml
+  tags: ntp
+
+- name: Configure sysctl parameters
+  include_tasks: sysctl.yml
+  tags: sysctl
+
+- name: Configure log rotation
+  include_tasks: logrotate.yml
+  tags: logs
